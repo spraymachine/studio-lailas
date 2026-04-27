@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Studio Lailas — Hand-crafted Sarees & Blouses</title>
+<meta name="description" content="Studio Lailas — a quiet atelier of hand-crafted sarees, blouses and heirloom textiles by Laila Khan." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,200..900,0..100,0..1;1,9..144,200..900,0..100,0..1&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@300;400;500&family=Geist:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- decorative SVG defs (paisley, booti) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="paisley" viewBox="0 0 100 100">
+      <path d="M50 8 C 78 18 92 42 80 66 C 70 86 46 92 32 78 C 22 68 26 54 38 50 C 50 46 58 36 50 24 C 46 18 46 12 50 8 Z M55 30 C 62 36 62 46 56 52 C 50 56 44 52 44 46 C 44 38 50 32 55 30 Z" fill="currentColor"/>
+    </symbol>
+    <symbol id="booti" viewBox="0 0 60 60">
+      <path d="M30 6 C 38 18 38 30 30 38 C 22 30 22 18 30 6 Z M30 22 C 42 30 42 42 30 50 C 18 42 18 30 30 22 Z" fill="currentColor"/>
+    </symbol>
+    <pattern id="boutiPattern" x="0" y="0" width="80" height="80" patternUnits="userSpaceOnUse">
+      <use href="#booti" x="10" y="10" width="22" height="22"/>
+      <use href="#booti" x="50" y="50" width="22" height="22"/>
+    </pattern>
+    <pattern id="zariStripe" x="0" y="0" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="2" height="6" fill="currentColor"/>
+    </pattern>
+  </defs>
+</svg>
+
+<div class="grain" aria-hidden="true"></div>
+<div class="weave" aria-hidden="true"></div>
+<div class="cursor" aria-hidden="true"><span></span></div>
+
+<!-- LOADER -->
+<div class="loader" id="loader" aria-hidden="true">
+  <div class="loader__inner">
+    <div class="loader__count"><span id="loaderCount">00</span></div>
+    <div class="loader__word">
+      <span class="loader__line">L</span><span class="loader__line">A</span><span class="loader__line">I</span><span class="loader__line">L</span><span class="loader__line">A</span><span class="loader__line">S</span>
+    </div>
+    <div class="loader__bar"><div class="loader__bar-fill" id="loaderBar"></div></div>
+  </div>
+</div>
+
+<!-- NAV -->
+<header class="nav">
+  <a class="nav__brand" href="#top">
+    <svg class="nav__brand-glyph" viewBox="0 0 100 100" width="22" height="22"><use href="#paisley"/></svg>
+    <span class="nav__brand-name">Studio Lailas</span>
+  </a>
+  <nav class="nav__links">
+    <a href="#manifesto" data-magnet>Atelier</a>
+    <a href="#works" data-magnet>Sarees</a>
+    <a href="#gallery" data-magnet>Lookbook</a>
+    <a href="#atelier" data-magnet>Process</a>
+    <a href="#contact" data-magnet>Contact</a>
+  </nav>
+  <a href="#contact" class="nav__cta" data-magnet>
+    <span>Book fitting ↗</span>
+  </a>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="hero__meta">
+    <span class="meta-line"><i></i>Est. 2019 · India</span>
+    <span class="meta-line"><i></i>Edit No. 09 — Mehfil</span>
+  </div>
+
+  <h1 class="hero__title" aria-label="Sarees woven slowly, by hand">
+    <span class="hero__row" data-row="1">
+      <span class="word">Six</span>
+      <span class="word italic">yards,</span>
+    </span>
+    <span class="hero__row" data-row="2">
+      <span class="word">a&nbsp;hundred</span>
+    </span>
+    <span class="hero__row" data-row="3">
+      <span class="word italic">stories.</span>
+      <svg class="hero__ornament" viewBox="0 0 100 100" width="80" height="80"><use href="#paisley"/></svg>
+    </span>
+  </h1>
+
+  <div class="hero__lede">
+    <p>Sarees, blouses and heirloom drapes — hand-woven, naturally dyed, signed by&nbsp;Laila.</p>
+    <a href="#works" class="hero__scroll" data-magnet>
+      <span>Enter the edit</span>
+      <svg width="36" height="36" viewBox="0 0 36 36" fill="none"><circle cx="18" cy="18" r="17.5" stroke="currentColor"/><path d="M14 16l4 4 4-4" stroke="currentColor" stroke-width="1.2"/></svg>
+    </a>
+  </div>
+
+  <!-- saree drape stand-in -->
+  <div class="hero__plate" aria-hidden="true">
+    <div class="plate plate--silk1"></div>
+    <div class="plate plate--silk2"></div>
+    <div class="plate__caption">
+      <span>Pl. 01 — Kanjivaram, dusk crimson, 2026</span>
+    </div>
+  </div>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span>Hand-block print</span><em>✶</em>
+      <span>Zari brocade</span><em>✶</em>
+      <span>Mulmul cotton</span><em>✶</em>
+      <span>Kanjivaram silk</span><em>✶</em>
+      <span>Chikankari</span><em>✶</em>
+      <span>Bandhani tie-dye</span><em>✶</em>
+      <span>Hand-block print</span><em>✶</em>
+      <span>Zari brocade</span><em>✶</em>
+      <span>Mulmul cotton</span><em>✶</em>
+      <span>Kanjivaram silk</span><em>✶</em>
+      <span>Chikankari</span><em>✶</em>
+      <span>Bandhani tie-dye</span><em>✶</em>
+    </div>
+  </div>
+</section>
+
+<!-- MANIFESTO -->
+<section class="manifesto" id="manifesto">
+  <!-- decorative booti border -->
+  <svg class="manifesto__booti" viewBox="0 0 1200 60" preserveAspectRatio="none" aria-hidden="true">
+    <rect width="1200" height="60" fill="url(#boutiPattern)"/>
+  </svg>
+
+  <div class="manifesto__index">
+    <span class="ix">۰۱</span>
+    <span class="ix-label">From the atelier</span>
+  </div>
+  <p class="manifesto__text" id="manifestoText">
+    A saree is a <em>conversation</em> with the woman wearing it. We weave slowly — yarn dyed in iron, indigo and madder, threads counted by hand. We refuse the loud, the rushed, the printed shortcut. Every drape is signed, dated, and held a season before it leaves the&nbsp;studio.
+  </p>
+  <div class="manifesto__sig">
+    <svg viewBox="0 0 200 60" fill="none" aria-hidden="true"><path d="M5 45 C 30 5, 60 60, 90 25 S 150 50, 195 15" stroke="currentColor" stroke-width="1.4" fill="none" stroke-linecap="round"/></svg>
+    <span>— Laila Khan, founder</span>
+  </div>
+</section>
+
+<!-- WORKS -->
+<section class="works" id="works">
+  <header class="section-head">
+    <span class="section-head__ix">۰۲</span>
+    <span class="section-head__label">Selected drapes</span>
+    <span class="section-head__year">2024 — 2026</span>
+  </header>
+
+  <div class="stack">
+    <article class="card" data-card="01">
+      <div class="card__no">01</div>
+      <div class="card__media">
+        <div class="card__placeholder">saree · 4:5</div>
+        <svg class="card__zari" viewBox="0 0 200 200" preserveAspectRatio="none" aria-hidden="true"><rect width="200" height="200" fill="url(#zariStripe)"/></svg>
+      </div>
+      <div class="card__body">
+        <h3>Kanjivaram — <em>Dusk Crimson</em></h3>
+        <p>Mulberry silk, woven over forty days. Zari border drawn from a 1940s temple sari.</p>
+        <span class="card__tag">Pure silk · Limited 6</span>
+      </div>
+    </article>
+    <article class="card" data-card="02">
+      <div class="card__no">02</div>
+      <div class="card__media">
+        <div class="card__placeholder">blouse · 3:4</div>
+      </div>
+      <div class="card__body">
+        <h3>Chikankari Blouse — <em>Noor</em></h3>
+        <p>Featherweight mulmul, hand-embroidered in Lucknow. Pearl-button placket.</p>
+        <span class="card__tag">Hand-embroidered</span>
+      </div>
+    </article>
+    <article class="card" data-card="03">
+      <div class="card__no">03</div>
+      <div class="card__media">
+        <div class="card__placeholder">dupatta · 1:1</div>
+        <svg class="card__zari" viewBox="0 0 200 200" preserveAspectRatio="none" aria-hidden="true"><rect width="200" height="200" fill="url(#zariStripe)"/></svg>
+      </div>
+      <div class="card__body">
+        <h3>Banarasi Dupatta — <em>Mehfil</em></h3>
+        <p>Tissue silk woven in Varanasi, finished with a hand-knotted gold fringe.</p>
+        <span class="card__tag">Heirloom · Numbered</span>
+      </div>
+    </article>
+    <article class="card" data-card="04">
+      <div class="card__no">04</div>
+      <div class="card__media">
+        <div class="card__placeholder">lehenga · 4:5</div>
+      </div>
+      <div class="card__body">
+        <h3>Bandhani Lehenga — <em>Marigold</em></h3>
+        <p>Tied and dyed in Kutch over six weeks. Pleats finished by a single tailor.</p>
+        <span class="card__tag">Made to measure</span>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- HORIZONTAL GALLERY -->
+<section class="gallery" id="gallery">
+  <div class="gallery__pin">
+    <header class="gallery__head">
+      <span class="ix">۰۳</span>
+      <h2>The <em>Mehfil</em> lookbook, Edit&nbsp;09</h2>
+      <span class="gallery__hint">— scroll →</span>
+    </header>
+    <div class="gallery__track" id="galleryTrack">
+
+      <figure class="frame">
+        <div class="frame__embed">
+          <blockquote class="instagram-media"
+            data-instgrm-permalink="https://www.instagram.com/reel/DXl2bAak-1e/"
+            data-instgrm-version="14"></blockquote>
+        </div>
+      </figure>
+
+      <figure class="frame">
+        <div class="frame__embed">
+          <blockquote class="instagram-media"
+            data-instgrm-permalink="https://www.instagram.com/reel/DXj2WkiEw_4/"
+            data-instgrm-version="14"></blockquote>
+        </div>
+      </figure>
+
+      <figure class="frame">
+        <div class="frame__embed">
+          <blockquote class="instagram-media"
+            data-instgrm-permalink="https://www.instagram.com/reel/DXe_i-xE-dF/"
+            data-instgrm-version="14"></blockquote>
+        </div>
+      </figure>
+
+      <figure class="frame">
+        <div class="frame__embed">
+          <blockquote class="instagram-media"
+            data-instgrm-permalink="https://www.instagram.com/reel/DXd-bVXk_fA/"
+            data-instgrm-version="14"></blockquote>
+        </div>
+      </figure>
+
+      <figure class="frame">
+        <div class="frame__embed">
+          <blockquote class="instagram-media"
+            data-instgrm-permalink="https://www.instagram.com/reel/DXZVBooiSC4/"
+            data-instgrm-version="14"></blockquote>
+        </div>
+      </figure>
+
+      <figure class="frame">
+        <div class="frame__embed">
+          <blockquote class="instagram-media"
+            data-instgrm-permalink="https://www.instagram.com/reel/DXXYQVxEx_m/"
+            data-instgrm-version="14"></blockquote>
+        </div>
+      </figure>
+
+    </div>
+  </div>
+</section>
+
+<!-- ATELIER PROCESS -->
+<section class="atelier" id="atelier">
+  <header class="section-head">
+    <span class="section-head__ix">۰۴</span>
+    <span class="section-head__label">Four hands, four weeks</span>
+    <span class="section-head__year">A method</span>
+  </header>
+
+  <ol class="steps">
+    <li class="step" data-step="01">
+      <span class="step__no">01</span>
+      <h4>Listen</h4>
+      <p>A conversation in the studio — heirlooms shown, occasions named, colours sat&nbsp;with.</p>
+      <svg class="step__motif" viewBox="0 0 100 100" aria-hidden="true"><use href="#paisley"/></svg>
+    </li>
+    <li class="step" data-step="02">
+      <span class="step__no">02</span>
+      <h4>Dye</h4>
+      <p>Yarn cooked in iron, madder root, indigo vat, marigold petal — slowly, in copper.</p>
+      <svg class="step__motif" viewBox="0 0 60 60" aria-hidden="true"><use href="#booti"/></svg>
+    </li>
+    <li class="step" data-step="03">
+      <span class="step__no">03</span>
+      <h4>Weave</h4>
+      <p>One loom, one weaver, one piece at a time. Zari pulled by hand, never machined.</p>
+      <svg class="step__motif" viewBox="0 0 100 100" aria-hidden="true"><use href="#paisley"/></svg>
+    </li>
+    <li class="step" data-step="04">
+      <span class="step__no">04</span>
+      <h4>Send</h4>
+      <p>Folded in muslin, tied with raw cotton, delivered with a hand-written&nbsp;note.</p>
+      <svg class="step__motif" viewBox="0 0 60 60" aria-hidden="true"><use href="#booti"/></svg>
+    </li>
+  </ol>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="contact__lead">
+    <span class="ix">۰۵</span>
+    <h2 class="contact__title">
+      <span>Write</span>
+      <span class="italic">to the</span>
+      <span>studio.</span>
+    </h2>
+    <p class="contact__sub">For commissions, bridal, press, or a quiet conversation.</p>
+  </div>
+
+  <div class="contact__grid">
+    <a class="contact__row" href="https://www.instagram.com/studiolailas" target="_blank" rel="noopener" data-magnet>
+      <span class="contact__k">Instagram</span>
+      <span class="contact__v">@studiolailas ↗</span>
+    </a>
+    <a class="contact__row" href="mailto:hello@studiolailas.com" data-magnet>
+      <span class="contact__k">Email</span>
+      <span class="contact__v">hello@studiolailas.com ↗</span>
+    </a>
+    <a class="contact__row" href="#" data-magnet>
+      <span class="contact__k">Studio</span>
+      <span class="contact__v">By appointment, India</span>
+    </a>
+    <a class="contact__row" href="#" data-magnet>
+      <span class="contact__k">Journal</span>
+      <span class="contact__v">Letters, four times a year</span>
+    </a>
+  </div>
+
+  <footer class="foot">
+    <div class="foot__big" id="footBig">STUDIO&nbsp;·&nbsp;LAILAS</div>
+    <div class="foot__row">
+      <span>© 2026 Studio Lailas — All work made by hand, in small numbers.</span>
+      <span>Site &nbsp;·&nbsp; <a href="#top">to the top ↑</a></span>
+    </div>
+  </footer>
+</section>
+
+<script async src="https://www.instagram.com/embed.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

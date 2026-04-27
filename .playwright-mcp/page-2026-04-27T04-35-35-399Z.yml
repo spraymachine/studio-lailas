@@ -1,0 +1,547 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - generic [ref=e4]: "00"
+    - generic [ref=e5]:
+      - generic [ref=e6]: L
+      - generic [ref=e7]: A
+      - generic [ref=e8]: I
+      - generic [ref=e9]: L
+      - generic [ref=e10]: A
+      - generic [ref=e11]: S
+  - banner [ref=e14]:
+    - link "Studio Lailas" [ref=e15] [cursor=pointer]:
+      - /url: "#top"
+      - img [ref=e16]
+      - generic [ref=e18]: Studio Lailas
+    - navigation [ref=e19]:
+      - link "Atelier" [ref=e20] [cursor=pointer]:
+        - /url: "#manifesto"
+      - link "Sarees" [ref=e21] [cursor=pointer]:
+        - /url: "#works"
+      - link "Lookbook" [ref=e22] [cursor=pointer]:
+        - /url: "#gallery"
+      - link "Process" [ref=e23] [cursor=pointer]:
+        - /url: "#atelier"
+      - link "Contact" [ref=e24] [cursor=pointer]:
+        - /url: "#contact"
+    - link "Book fitting ↗" [ref=e25] [cursor=pointer]:
+      - /url: "#contact"
+  - generic [ref=e26]:
+    - generic [ref=e27]:
+      - generic [ref=e28]: Est. 2019 · India
+      - generic [ref=e30]: Edit No. 09 — Mehfil
+    - heading "Sarees woven slowly, by hand" [level=1] [ref=e32]:
+      - generic [ref=e33]:
+        - generic [ref=e34]: Six
+        - generic [ref=e35]: yards,
+      - generic [ref=e37]: a hundred
+      - generic [ref=e38]:
+        - generic [ref=e39]: stories.
+        - img [ref=e40]
+    - generic [ref=e42]:
+      - paragraph [ref=e43]: Sarees, blouses and heirloom drapes — hand-woven, naturally dyed, signed by Laila.
+      - link "Enter the edit" [ref=e44] [cursor=pointer]:
+        - /url: "#works"
+        - generic [ref=e45]: Enter the edit
+        - img [ref=e46]
+    - generic:
+      - generic: Pl. 01 — Kanjivaram, dusk crimson, 2026
+    - generic [ref=e50]:
+      - generic [ref=e51]: Hand-block print
+      - emphasis [ref=e52]: ✶
+      - generic [ref=e53]: Zari brocade
+      - emphasis [ref=e54]: ✶
+      - generic [ref=e55]: Mulmul cotton
+      - emphasis [ref=e56]: ✶
+      - generic [ref=e57]: Kanjivaram silk
+      - emphasis [ref=e58]: ✶
+      - generic [ref=e59]: Chikankari
+      - emphasis [ref=e60]: ✶
+      - generic [ref=e61]: Bandhani tie-dye
+      - emphasis [ref=e62]: ✶
+      - generic [ref=e63]: Hand-block print
+      - emphasis [ref=e64]: ✶
+      - generic [ref=e65]: Zari brocade
+      - emphasis [ref=e66]: ✶
+      - generic [ref=e67]: Mulmul cotton
+      - emphasis [ref=e68]: ✶
+      - generic [ref=e69]: Kanjivaram silk
+      - emphasis [ref=e70]: ✶
+      - generic [ref=e71]: Chikankari
+      - emphasis [ref=e72]: ✶
+      - generic [ref=e73]: Bandhani tie-dye
+      - emphasis [ref=e74]: ✶
+  - generic [ref=e75]:
+    - img [ref=e76]
+    - generic [ref=e78]:
+      - generic [ref=e79]: ۰۱
+      - generic [ref=e80]: From the atelier
+    - paragraph [ref=e81]:
+      - text: A saree is a
+      - emphasis [ref=e82]: conversation
+      - text: with the woman wearing it. We weave slowly — yarn dyed in iron, indigo and madder, threads counted by hand. We refuse the loud, the rushed, the printed shortcut. Every drape is signed, dated, and held a season before it leaves the studio.
+    - generic [ref=e83]:
+      - img [ref=e84]
+      - generic [ref=e86]: — Laila Khan, founder
+  - generic [ref=e87]:
+    - generic [ref=e88]:
+      - generic [ref=e89]: ۰۲
+      - generic [ref=e90]: Selected drapes
+      - generic [ref=e91]: 2024 — 2026
+    - generic [ref=e92]:
+      - article [ref=e93]:
+        - generic [ref=e94]: "01"
+        - generic [ref=e95]:
+          - generic [ref=e96]: saree · 4:5
+          - img [ref=e97]
+        - generic [ref=e99]:
+          - heading "Kanjivaram — Dusk Crimson" [level=3] [ref=e100]:
+            - text: Kanjivaram —
+            - emphasis [ref=e101]: Dusk Crimson
+          - paragraph [ref=e102]: Mulberry silk, woven over forty days. Zari border drawn from a 1940s temple sari.
+          - generic [ref=e103]: Pure silk · Limited 6
+      - article [ref=e104]:
+        - generic [ref=e105]: "02"
+        - generic [ref=e107]: blouse · 3:4
+        - generic [ref=e108]:
+          - heading "Chikankari Blouse — Noor" [level=3] [ref=e109]:
+            - text: Chikankari Blouse —
+            - emphasis [ref=e110]: Noor
+          - paragraph [ref=e111]: Featherweight mulmul, hand-embroidered in Lucknow. Pearl-button placket.
+          - generic [ref=e112]: Hand-embroidered
+      - article [ref=e113]:
+        - generic [ref=e114]: "03"
+        - generic [ref=e115]:
+          - generic [ref=e116]: dupatta · 1:1
+          - img [ref=e117]
+        - generic [ref=e119]:
+          - heading "Banarasi Dupatta — Mehfil" [level=3] [ref=e120]:
+            - text: Banarasi Dupatta —
+            - emphasis [ref=e121]: Mehfil
+          - paragraph [ref=e122]: Tissue silk woven in Varanasi, finished with a hand-knotted gold fringe.
+          - generic [ref=e123]: Heirloom · Numbered
+      - article [ref=e124]:
+        - generic [ref=e125]: "04"
+        - generic [ref=e127]: lehenga · 4:5
+        - generic [ref=e128]:
+          - heading "Bandhani Lehenga — Marigold" [level=3] [ref=e129]:
+            - text: Bandhani Lehenga —
+            - emphasis [ref=e130]: Marigold
+          - paragraph [ref=e131]: Tied and dyed in Kutch over six weeks. Pleats finished by a single tailor.
+          - generic [ref=e132]: Made to measure
+  - generic [ref=e134]:
+    - generic [ref=e135]:
+      - generic [ref=e136]: ۰۳
+      - heading "The Mehfil lookbook, Edit 09" [level=2] [ref=e137]:
+        - text: The
+        - emphasis [ref=e138]: Mehfil
+        - text: lookbook, Edit 09
+      - generic [ref=e139]: — scroll →
+    - generic [ref=e140]:
+      - figure [ref=e141]:
+        - iframe [ref=e143]:
+          - generic [ref=f37e5]:
+            - generic [ref=f37e6]:
+              - link "studiolailas" [ref=f37e9] [cursor=pointer]:
+                - /url: https://www.instagram.com/stories/studiolailas/?utm_source=ig_embed&ig_rid=d39d8361-b118-4e33-abeb-59383751619b
+                - img "studiolailas" [ref=f37e10]
+              - generic [ref=f37e11]:
+                - link "studiolailas Verified" [ref=f37e12] [cursor=pointer]:
+                  - /url: https://www.instagram.com/studiolailas/?utm_source=ig_embed&ig_rid=d39d8361-b118-4e33-abeb-59383751619b
+                  - generic [ref=f37e13]: studiolailas
+                  - generic [ref=f37e15]: Verified
+                - generic [ref=f37e16]: Original audio
+              - link "View profile" [ref=f37e18] [cursor=pointer]:
+                - /url: https://www.instagram.com/studiolailas/?utm_source=ig_embed&ig_rid=d39d8361-b118-4e33-abeb-59383751619b
+            - generic [ref=f37e19]:
+              - link "Instagram post shared by @studiolailas" [ref=f37e20] [cursor=pointer]:
+                - /url: https://www.instagram.com/reel/DXl2bAak-1e/?utm_source=ig_embed&ig_rid=d39d8361-b118-4e33-abeb-59383751619b
+                - img "Instagram post shared by @studiolailas"
+              - generic [ref=f37e22]:
+                - button "Play" [ref=f37e26]
+                - button "Control" [ref=f37e27] [cursor=pointer]
+            - generic [ref=f37e28]:
+              - link "studiolailas studiolailas Verified 823 posts · 8K followers" [ref=f37e29] [cursor=pointer]:
+                - /url: https://www.instagram.com/studiolailas/?utm_source=ig_embed&ig_rid=d39d8361-b118-4e33-abeb-59383751619b
+                - generic [ref=f37e30]:
+                  - img "studiolailas" [ref=f37e31]
+                  - generic [ref=f37e32]:
+                    - generic [ref=f37e33]:
+                      - generic [ref=f37e34]: studiolailas
+                      - generic [ref=f37e36]: Verified
+                    - generic [ref=f37e38]: 823 posts · 8K followers
+                - generic [ref=f37e39]:
+                  - img [ref=f37e40]
+                  - img [ref=f37e41]
+              - link "View more on Instagram" [ref=f37e43] [cursor=pointer]:
+                - /url: https://www.instagram.com/studiolailas/?utm_source=ig_embed&ig_rid=d39d8361-b118-4e33-abeb-59383751619b
+            - generic [ref=f37e44]:
+              - link "Like" [ref=f37e45] [cursor=pointer]:
+                - /url: https://www.instagram.com/reel/DXl2bAak-1e/?utm_source=ig_embed&ig_rid=d39d8361-b118-4e33-abeb-59383751619b
+                - generic: Like
+              - link "Comment" [ref=f37e47] [cursor=pointer]:
+                - /url: https://www.instagram.com/reel/DXl2bAak-1e/?utm_source=ig_embed&ig_rid=d39d8361-b118-4e33-abeb-59383751619b
+                - generic [ref=f37e49]: Comment
+              - link "Share" [ref=f37e50] [cursor=pointer]:
+                - /url: https://www.instagram.com/reel/DXl2bAak-1e/?utm_source=ig_embed&ig_rid=d39d8361-b118-4e33-abeb-59383751619b
+                - generic [ref=f37e52]: Share
+              - link "Save" [ref=f37e53] [cursor=pointer]:
+                - /url: https://www.instagram.com/reel/DXl2bAak-1e/?utm_source=ig_embed&ig_rid=d39d8361-b118-4e33-abeb-59383751619b
+                - generic [ref=f37e55]: Save
+            - link "74 likes" [ref=f37e57] [cursor=pointer]:
+              - /url: https://www.instagram.com/reel/DXl2bAak-1e/?utm_source=ig_embed&ig_rid=d39d8361-b118-4e33-abeb-59383751619b
+            - generic [ref=f37e58]:
+              - link "Add a comment..." [ref=f37e59] [cursor=pointer]:
+                - /url: https://www.instagram.com/reel/DXl2bAak-1e/?utm_source=ig_embed&ig_rid=d39d8361-b118-4e33-abeb-59383751619b
+              - link "Instagram" [ref=f37e60] [cursor=pointer]:
+                - /url: https://www.instagram.com/reel/DXl2bAak-1e/?utm_source=ig_embed&ig_rid=d39d8361-b118-4e33-abeb-59383751619b
+                - generic [ref=f37e62]: Instagram
+      - figure [ref=e144]:
+        - iframe [ref=e146]:
+          - generic [ref=f38e5]:
+            - generic [ref=f38e6]:
+              - link "studiolailas" [ref=f38e9] [cursor=pointer]:
+                - /url: https://www.instagram.com/stories/studiolailas/?utm_source=ig_embed&ig_rid=d948ee76-4824-4a4c-818a-b6d3e4e44af5
+                - img "studiolailas" [ref=f38e10]
+              - generic [ref=f38e11]:
+                - link "studiolailas Verified" [ref=f38e12] [cursor=pointer]:
+                  - /url: https://www.instagram.com/studiolailas/?utm_source=ig_embed&ig_rid=d948ee76-4824-4a4c-818a-b6d3e4e44af5
+                  - generic [ref=f38e13]: studiolailas
+                  - generic [ref=f38e15]: Verified
+                - generic [ref=f38e16]: Original audio
+              - link "View profile" [ref=f38e18] [cursor=pointer]:
+                - /url: https://www.instagram.com/studiolailas/?utm_source=ig_embed&ig_rid=d948ee76-4824-4a4c-818a-b6d3e4e44af5
+            - link "Instagram post shared by @studiolailas Play Watch on Instagram" [ref=f38e20] [cursor=pointer]:
+              - /url: https://www.instagram.com/reel/DXj2WkiEw_4/?utm_source=ig_embed&ig_rid=d948ee76-4824-4a4c-818a-b6d3e4e44af5
+              - img "Instagram post shared by @studiolailas"
+              - generic [ref=f38e21]:
+                - generic [ref=f38e23]: Play
+                - generic [ref=f38e24]: Watch on Instagram
+            - generic [ref=f38e25]:
+              - link "studiolailas studiolailas Verified 823 posts · 8K followers" [ref=f38e26] [cursor=pointer]:
+                - /url: https://www.instagram.com/studiolailas/?utm_source=ig_embed&ig_rid=d948ee76-4824-4a4c-818a-b6d3e4e44af5
+                - generic [ref=f38e27]:
+                  - img "studiolailas" [ref=f38e28]
+                  - generic [ref=f38e29]:
+                    - generic [ref=f38e30]:
+                      - generic [ref=f38e31]: studiolailas
+                      - generic [ref=f38e33]: Verified
+                    - generic [ref=f38e35]: 823 posts · 8K followers
+                - generic [ref=f38e36]:
+                  - img [ref=f38e37]
+                  - img [ref=f38e38]
+              - link "View more on Instagram" [ref=f38e40] [cursor=pointer]:
+                - /url: https://www.instagram.com/studiolailas/?utm_source=ig_embed&ig_rid=d948ee76-4824-4a4c-818a-b6d3e4e44af5
+            - generic [ref=f38e41]:
+              - link "Like" [ref=f38e42] [cursor=pointer]:
+                - /url: https://www.instagram.com/reel/DXj2WkiEw_4/?utm_source=ig_embed&ig_rid=d948ee76-4824-4a4c-818a-b6d3e4e44af5
+                - generic: Like
+              - link "Comment" [ref=f38e44] [cursor=pointer]:
+                - /url: https://www.instagram.com/reel/DXj2WkiEw_4/?utm_source=ig_embed&ig_rid=d948ee76-4824-4a4c-818a-b6d3e4e44af5
+                - generic [ref=f38e46]: Comment
+              - link "Share" [ref=f38e47] [cursor=pointer]:
+                - /url: https://www.instagram.com/reel/DXj2WkiEw_4/?utm_source=ig_embed&ig_rid=d948ee76-4824-4a4c-818a-b6d3e4e44af5
+                - generic [ref=f38e49]: Share
+              - link "Save" [ref=f38e50] [cursor=pointer]:
+                - /url: https://www.instagram.com/reel/DXj2WkiEw_4/?utm_source=ig_embed&ig_rid=d948ee76-4824-4a4c-818a-b6d3e4e44af5
+                - generic [ref=f38e52]: Save
+            - link "17 likes" [ref=f38e54] [cursor=pointer]:
+              - /url: https://www.instagram.com/reel/DXj2WkiEw_4/?utm_source=ig_embed&ig_rid=d948ee76-4824-4a4c-818a-b6d3e4e44af5
+            - generic [ref=f38e55]:
+              - link "Add a comment..." [ref=f38e56] [cursor=pointer]:
+                - /url: https://www.instagram.com/reel/DXj2WkiEw_4/?utm_source=ig_embed&ig_rid=d948ee76-4824-4a4c-818a-b6d3e4e44af5
+              - link "Instagram" [ref=f38e57] [cursor=pointer]:
+                - /url: https://www.instagram.com/reel/DXj2WkiEw_4/?utm_source=ig_embed&ig_rid=d948ee76-4824-4a4c-818a-b6d3e4e44af5
+                - generic [ref=f38e59]: Instagram
+      - figure [ref=e147]:
+        - iframe [ref=e149]:
+          - generic [ref=f39e5]:
+            - generic [ref=f39e6]:
+              - link "studiolailas" [ref=f39e9] [cursor=pointer]:
+                - /url: https://www.instagram.com/stories/studiolailas/?utm_source=ig_embed&ig_rid=7195c7b4-318a-4dc0-8e91-3728a0d62d26
+                - img "studiolailas" [ref=f39e10]
+              - generic [ref=f39e11]:
+                - link "studiolailas Verified" [ref=f39e12] [cursor=pointer]:
+                  - /url: https://www.instagram.com/studiolailas/?utm_source=ig_embed&ig_rid=7195c7b4-318a-4dc0-8e91-3728a0d62d26
+                  - generic [ref=f39e13]: studiolailas
+                  - generic [ref=f39e15]: Verified
+                - generic [ref=f39e16]: Original audio
+              - link "View profile" [ref=f39e18] [cursor=pointer]:
+                - /url: https://www.instagram.com/studiolailas/?utm_source=ig_embed&ig_rid=7195c7b4-318a-4dc0-8e91-3728a0d62d26
+            - generic [ref=f39e19]:
+              - link "Instagram post shared by @studiolailas" [ref=f39e20] [cursor=pointer]:
+                - /url: https://www.instagram.com/reel/DXe_i-xE-dF/?utm_source=ig_embed&ig_rid=7195c7b4-318a-4dc0-8e91-3728a0d62d26
+                - img "Instagram post shared by @studiolailas"
+              - generic [ref=f39e22]:
+                - button "Play" [ref=f39e26]
+                - button "Control" [ref=f39e27] [cursor=pointer]
+            - generic [ref=f39e28]:
+              - link "studiolailas studiolailas Verified 823 posts · 8K followers" [ref=f39e29] [cursor=pointer]:
+                - /url: https://www.instagram.com/studiolailas/?utm_source=ig_embed&ig_rid=7195c7b4-318a-4dc0-8e91-3728a0d62d26
+                - generic [ref=f39e30]:
+                  - img "studiolailas" [ref=f39e31]
+                  - generic [ref=f39e32]:
+                    - generic [ref=f39e33]:
+                      - generic [ref=f39e34]: studiolailas
+                      - generic [ref=f39e36]: Verified
+                    - generic [ref=f39e38]: 823 posts · 8K followers
+                - generic [ref=f39e39]:
+                  - img [ref=f39e40]
+                  - img [ref=f39e41]
+              - link "View more on Instagram" [ref=f39e43] [cursor=pointer]:
+                - /url: https://www.instagram.com/studiolailas/?utm_source=ig_embed&ig_rid=7195c7b4-318a-4dc0-8e91-3728a0d62d26
+            - generic [ref=f39e44]:
+              - link "Like" [ref=f39e45] [cursor=pointer]:
+                - /url: https://www.instagram.com/reel/DXe_i-xE-dF/?utm_source=ig_embed&ig_rid=7195c7b4-318a-4dc0-8e91-3728a0d62d26
+                - generic: Like
+              - link "Comment" [ref=f39e47] [cursor=pointer]:
+                - /url: https://www.instagram.com/reel/DXe_i-xE-dF/?utm_source=ig_embed&ig_rid=7195c7b4-318a-4dc0-8e91-3728a0d62d26
+                - generic [ref=f39e49]: Comment
+              - link "Share" [ref=f39e50] [cursor=pointer]:
+                - /url: https://www.instagram.com/reel/DXe_i-xE-dF/?utm_source=ig_embed&ig_rid=7195c7b4-318a-4dc0-8e91-3728a0d62d26
+                - generic [ref=f39e52]: Share
+              - link "Save" [ref=f39e53] [cursor=pointer]:
+                - /url: https://www.instagram.com/reel/DXe_i-xE-dF/?utm_source=ig_embed&ig_rid=7195c7b4-318a-4dc0-8e91-3728a0d62d26
+                - generic [ref=f39e55]: Save
+            - link "32 likes" [ref=f39e57] [cursor=pointer]:
+              - /url: https://www.instagram.com/reel/DXe_i-xE-dF/?utm_source=ig_embed&ig_rid=7195c7b4-318a-4dc0-8e91-3728a0d62d26
+            - generic [ref=f39e58]:
+              - link "Add a comment..." [ref=f39e59] [cursor=pointer]:
+                - /url: https://www.instagram.com/reel/DXe_i-xE-dF/?utm_source=ig_embed&ig_rid=7195c7b4-318a-4dc0-8e91-3728a0d62d26
+              - link "Instagram" [ref=f39e60] [cursor=pointer]:
+                - /url: https://www.instagram.com/reel/DXe_i-xE-dF/?utm_source=ig_embed&ig_rid=7195c7b4-318a-4dc0-8e91-3728a0d62d26
+                - generic [ref=f39e62]: Instagram
+      - figure [ref=e150]:
+        - iframe [ref=e152]:
+          - generic [ref=f40e5]:
+            - generic [ref=f40e6]:
+              - link "studiolailas" [ref=f40e9] [cursor=pointer]:
+                - /url: https://www.instagram.com/stories/studiolailas/?utm_source=ig_embed&ig_rid=328ead1d-3d4e-41cc-99a0-adb2eada9df5
+                - img "studiolailas" [ref=f40e10]
+              - generic [ref=f40e11]:
+                - link "studiolailas Verified" [ref=f40e12] [cursor=pointer]:
+                  - /url: https://www.instagram.com/studiolailas/?utm_source=ig_embed&ig_rid=328ead1d-3d4e-41cc-99a0-adb2eada9df5
+                  - generic [ref=f40e13]: studiolailas
+                  - generic [ref=f40e15]: Verified
+                - generic [ref=f40e16]: Original audio
+              - link "View profile" [ref=f40e18] [cursor=pointer]:
+                - /url: https://www.instagram.com/studiolailas/?utm_source=ig_embed&ig_rid=328ead1d-3d4e-41cc-99a0-adb2eada9df5
+            - generic [ref=f40e19]:
+              - link "Instagram post shared by @studiolailas" [ref=f40e20] [cursor=pointer]:
+                - /url: https://www.instagram.com/reel/DXd-bVXk_fA/?utm_source=ig_embed&ig_rid=328ead1d-3d4e-41cc-99a0-adb2eada9df5
+                - img "Instagram post shared by @studiolailas"
+              - generic [ref=f40e22]:
+                - button "Play" [ref=f40e26]
+                - button "Control" [ref=f40e27] [cursor=pointer]
+            - generic [ref=f40e28]:
+              - link "studiolailas studiolailas Verified 823 posts · 8K followers" [ref=f40e29] [cursor=pointer]:
+                - /url: https://www.instagram.com/studiolailas/?utm_source=ig_embed&ig_rid=328ead1d-3d4e-41cc-99a0-adb2eada9df5
+                - generic [ref=f40e30]:
+                  - img "studiolailas" [ref=f40e31]
+                  - generic [ref=f40e32]:
+                    - generic [ref=f40e33]:
+                      - generic [ref=f40e34]: studiolailas
+                      - generic [ref=f40e36]: Verified
+                    - generic [ref=f40e38]: 823 posts · 8K followers
+                - generic [ref=f40e39]:
+                  - img [ref=f40e40]
+                  - img [ref=f40e41]
+              - link "View more on Instagram" [ref=f40e43] [cursor=pointer]:
+                - /url: https://www.instagram.com/studiolailas/?utm_source=ig_embed&ig_rid=328ead1d-3d4e-41cc-99a0-adb2eada9df5
+            - generic [ref=f40e44]:
+              - link "Like" [ref=f40e45] [cursor=pointer]:
+                - /url: https://www.instagram.com/reel/DXd-bVXk_fA/?utm_source=ig_embed&ig_rid=328ead1d-3d4e-41cc-99a0-adb2eada9df5
+                - generic: Like
+              - link "Comment" [ref=f40e47] [cursor=pointer]:
+                - /url: https://www.instagram.com/reel/DXd-bVXk_fA/?utm_source=ig_embed&ig_rid=328ead1d-3d4e-41cc-99a0-adb2eada9df5
+                - generic [ref=f40e49]: Comment
+              - link "Share" [ref=f40e50] [cursor=pointer]:
+                - /url: https://www.instagram.com/reel/DXd-bVXk_fA/?utm_source=ig_embed&ig_rid=328ead1d-3d4e-41cc-99a0-adb2eada9df5
+                - generic [ref=f40e52]: Share
+              - link "Save" [ref=f40e53] [cursor=pointer]:
+                - /url: https://www.instagram.com/reel/DXd-bVXk_fA/?utm_source=ig_embed&ig_rid=328ead1d-3d4e-41cc-99a0-adb2eada9df5
+                - generic [ref=f40e55]: Save
+            - link "152 likes" [ref=f40e57] [cursor=pointer]:
+              - /url: https://www.instagram.com/reel/DXd-bVXk_fA/?utm_source=ig_embed&ig_rid=328ead1d-3d4e-41cc-99a0-adb2eada9df5
+            - generic [ref=f40e58]:
+              - link "Add a comment..." [ref=f40e59] [cursor=pointer]:
+                - /url: https://www.instagram.com/reel/DXd-bVXk_fA/?utm_source=ig_embed&ig_rid=328ead1d-3d4e-41cc-99a0-adb2eada9df5
+              - link "Instagram" [ref=f40e60] [cursor=pointer]:
+                - /url: https://www.instagram.com/reel/DXd-bVXk_fA/?utm_source=ig_embed&ig_rid=328ead1d-3d4e-41cc-99a0-adb2eada9df5
+                - generic [ref=f40e62]: Instagram
+      - figure [ref=e153]:
+        - iframe [ref=e155]:
+          - generic [ref=f41e5]:
+            - generic [ref=f41e6]:
+              - generic [ref=f41e7]:
+                - link "makeupbyshwethagowda" [ref=f41e8] [cursor=pointer]:
+                  - /url: https://www.instagram.com/studiolailas/?utm_source=ig_embed&ig_rid=b9cbf94a-65b7-4dad-b54c-184ccac6524c
+                  - img "makeupbyshwethagowda" [ref=f41e9]
+                - link "makeupbyshwethagowda" [ref=f41e10] [cursor=pointer]:
+                  - /url: https://www.instagram.com/makeupbyshwethagowda/?utm_source=ig_embed&ig_rid=b9cbf94a-65b7-4dad-b54c-184ccac6524c
+                  - img "makeupbyshwethagowda" [ref=f41e11]
+              - generic [ref=f41e12]:
+                - generic [ref=f41e13]:
+                  - link "makeupbyshwethagowda" [ref=f41e14] [cursor=pointer]:
+                    - /url: https://www.instagram.com/makeupbyshwethagowda/?utm_source=ig_embed&ig_rid=b9cbf94a-65b7-4dad-b54c-184ccac6524c
+                    - generic [ref=f41e15]: makeupbyshwethagowda
+                  - generic [ref=f41e16]: and
+                  - link "studiolailas" [ref=f41e17] [cursor=pointer]:
+                    - /url: https://www.instagram.com/studiolailas/?utm_source=ig_embed&ig_rid=b9cbf94a-65b7-4dad-b54c-184ccac6524c
+                    - generic [ref=f41e18]: studiolailas
+                - generic [ref=f41e19]: A.R. Rahman, Chinmayi, Benny Dayal, Pa. Vijay · Chinnama Chilakamma
+              - link "View profile" [ref=f41e21] [cursor=pointer]:
+                - /url: https://www.instagram.com/makeupbyshwethagowda/?utm_source=ig_embed&ig_rid=b9cbf94a-65b7-4dad-b54c-184ccac6524c
+            - link "Instagram post shared by @makeupbyshwethagowda Play Watch on Instagram" [ref=f41e23] [cursor=pointer]:
+              - /url: https://www.instagram.com/reel/DXZVBooiSC4/?utm_source=ig_embed&ig_rid=b9cbf94a-65b7-4dad-b54c-184ccac6524c
+              - img "Instagram post shared by @makeupbyshwethagowda"
+              - generic [ref=f41e24]:
+                - generic [ref=f41e26]: Play
+                - generic [ref=f41e27]: Watch on Instagram
+            - generic [ref=f41e28]:
+              - link "makeupbyshwethagowda makeupbyshwethagowda 796 posts · 8K followers" [ref=f41e29] [cursor=pointer]:
+                - /url: https://www.instagram.com/makeupbyshwethagowda/?utm_source=ig_embed&ig_rid=b9cbf94a-65b7-4dad-b54c-184ccac6524c
+                - generic [ref=f41e30]:
+                  - img "makeupbyshwethagowda" [ref=f41e31]
+                  - generic [ref=f41e32]:
+                    - generic [ref=f41e34]: makeupbyshwethagowda
+                    - generic [ref=f41e36]: 796 posts · 8K followers
+                - generic [ref=f41e37]:
+                  - img [ref=f41e38]
+                  - img [ref=f41e39]
+              - link "View more on Instagram" [ref=f41e41] [cursor=pointer]:
+                - /url: https://www.instagram.com/makeupbyshwethagowda/?utm_source=ig_embed&ig_rid=b9cbf94a-65b7-4dad-b54c-184ccac6524c
+            - generic [ref=f41e42]:
+              - link "Like" [ref=f41e43] [cursor=pointer]:
+                - /url: https://www.instagram.com/reel/DXZVBooiSC4/?utm_source=ig_embed&ig_rid=b9cbf94a-65b7-4dad-b54c-184ccac6524c
+                - generic: Like
+              - link "Comment" [ref=f41e45] [cursor=pointer]:
+                - /url: https://www.instagram.com/reel/DXZVBooiSC4/?utm_source=ig_embed&ig_rid=b9cbf94a-65b7-4dad-b54c-184ccac6524c
+                - generic [ref=f41e47]: Comment
+              - link "Share" [ref=f41e48] [cursor=pointer]:
+                - /url: https://www.instagram.com/reel/DXZVBooiSC4/?utm_source=ig_embed&ig_rid=b9cbf94a-65b7-4dad-b54c-184ccac6524c
+                - generic [ref=f41e50]: Share
+              - link "Save" [ref=f41e51] [cursor=pointer]:
+                - /url: https://www.instagram.com/reel/DXZVBooiSC4/?utm_source=ig_embed&ig_rid=b9cbf94a-65b7-4dad-b54c-184ccac6524c
+                - generic [ref=f41e53]: Save
+            - link "117 likes" [ref=f41e55] [cursor=pointer]:
+              - /url: https://www.instagram.com/reel/DXZVBooiSC4/?utm_source=ig_embed&ig_rid=b9cbf94a-65b7-4dad-b54c-184ccac6524c
+            - generic [ref=f41e56]:
+              - link "Add a comment..." [ref=f41e57] [cursor=pointer]:
+                - /url: https://www.instagram.com/reel/DXZVBooiSC4/?utm_source=ig_embed&ig_rid=b9cbf94a-65b7-4dad-b54c-184ccac6524c
+              - link "Instagram" [ref=f41e58] [cursor=pointer]:
+                - /url: https://www.instagram.com/reel/DXZVBooiSC4/?utm_source=ig_embed&ig_rid=b9cbf94a-65b7-4dad-b54c-184ccac6524c
+                - generic [ref=f41e60]: Instagram
+      - figure [ref=e156]:
+        - iframe [ref=e158]:
+          - generic [ref=f42e5]:
+            - generic [ref=f42e6]:
+              - link "studiolailas" [ref=f42e9] [cursor=pointer]:
+                - /url: https://www.instagram.com/stories/studiolailas/?utm_source=ig_embed&ig_rid=0d13990f-ef98-462f-af37-c41e76af9ccf
+                - img "studiolailas" [ref=f42e10]
+              - generic [ref=f42e11]:
+                - link "studiolailas Verified" [ref=f42e12] [cursor=pointer]:
+                  - /url: https://www.instagram.com/studiolailas/?utm_source=ig_embed&ig_rid=0d13990f-ef98-462f-af37-c41e76af9ccf
+                  - generic [ref=f42e13]: studiolailas
+                  - generic [ref=f42e15]: Verified
+                - generic [ref=f42e16]: Original audio
+              - link "View profile" [ref=f42e18] [cursor=pointer]:
+                - /url: https://www.instagram.com/studiolailas/?utm_source=ig_embed&ig_rid=0d13990f-ef98-462f-af37-c41e76af9ccf
+            - link "Instagram post shared by @studiolailas" [ref=f42e20] [cursor=pointer]:
+              - /url: https://www.instagram.com/reel/DXXYQVxEx_m/?utm_source=ig_embed&ig_rid=0d13990f-ef98-462f-af37-c41e76af9ccf
+              - img "Instagram post shared by @studiolailas"
+            - generic [ref=f42e21]:
+              - link "studiolailas studiolailas Verified 823 posts · 8K followers" [ref=f42e22] [cursor=pointer]:
+                - /url: https://www.instagram.com/studiolailas/?utm_source=ig_embed&ig_rid=0d13990f-ef98-462f-af37-c41e76af9ccf
+                - generic [ref=f42e23]:
+                  - img "studiolailas" [ref=f42e24]
+                  - generic [ref=f42e25]:
+                    - generic [ref=f42e26]:
+                      - generic [ref=f42e27]: studiolailas
+                      - generic [ref=f42e29]: Verified
+                    - generic [ref=f42e31]: 823 posts · 8K followers
+                - generic [ref=f42e32]:
+                  - img [ref=f42e33]
+                  - img [ref=f42e34]
+              - link "View more on Instagram" [ref=f42e36] [cursor=pointer]:
+                - /url: https://www.instagram.com/studiolailas/?utm_source=ig_embed&ig_rid=0d13990f-ef98-462f-af37-c41e76af9ccf
+            - generic [ref=f42e37]:
+              - link "Like" [ref=f42e38] [cursor=pointer]:
+                - /url: https://www.instagram.com/reel/DXXYQVxEx_m/?utm_source=ig_embed&ig_rid=0d13990f-ef98-462f-af37-c41e76af9ccf
+                - generic: Like
+              - link "Comment" [ref=f42e40] [cursor=pointer]:
+                - /url: https://www.instagram.com/reel/DXXYQVxEx_m/?utm_source=ig_embed&ig_rid=0d13990f-ef98-462f-af37-c41e76af9ccf
+                - generic [ref=f42e42]: Comment
+              - link "Share" [ref=f42e43] [cursor=pointer]:
+                - /url: https://www.instagram.com/reel/DXXYQVxEx_m/?utm_source=ig_embed&ig_rid=0d13990f-ef98-462f-af37-c41e76af9ccf
+                - generic [ref=f42e45]: Share
+              - link "Save" [ref=f42e46] [cursor=pointer]:
+                - /url: https://www.instagram.com/reel/DXXYQVxEx_m/?utm_source=ig_embed&ig_rid=0d13990f-ef98-462f-af37-c41e76af9ccf
+                - generic [ref=f42e48]: Save
+            - link "451 likes" [ref=f42e50] [cursor=pointer]:
+              - /url: https://www.instagram.com/reel/DXXYQVxEx_m/?utm_source=ig_embed&ig_rid=0d13990f-ef98-462f-af37-c41e76af9ccf
+            - generic [ref=f42e51]:
+              - link "Add a comment..." [ref=f42e52] [cursor=pointer]:
+                - /url: https://www.instagram.com/reel/DXXYQVxEx_m/?utm_source=ig_embed&ig_rid=0d13990f-ef98-462f-af37-c41e76af9ccf
+              - link "Instagram" [ref=f42e53] [cursor=pointer]:
+                - /url: https://www.instagram.com/reel/DXXYQVxEx_m/?utm_source=ig_embed&ig_rid=0d13990f-ef98-462f-af37-c41e76af9ccf
+                - generic [ref=f42e55]: Instagram
+  - generic [ref=e159]:
+    - generic [ref=e160]:
+      - generic [ref=e161]: ۰۴
+      - generic [ref=e162]: Four hands, four weeks
+      - generic [ref=e163]: A method
+    - list [ref=e164]:
+      - listitem [ref=e165]:
+        - generic [ref=e166]: "01"
+        - heading "Listen" [level=4] [ref=e167]
+        - paragraph [ref=e168]: A conversation in the studio — heirlooms shown, occasions named, colours sat with.
+        - img
+      - listitem [ref=e169]:
+        - generic [ref=e170]: "02"
+        - heading "Dye" [level=4] [ref=e171]
+        - paragraph [ref=e172]: Yarn cooked in iron, madder root, indigo vat, marigold petal — slowly, in copper.
+        - img
+      - listitem [ref=e173]:
+        - generic [ref=e174]: "03"
+        - heading "Weave" [level=4] [ref=e175]
+        - paragraph [ref=e176]: One loom, one weaver, one piece at a time. Zari pulled by hand, never machined.
+        - img
+      - listitem [ref=e177]:
+        - generic [ref=e178]: "04"
+        - heading "Send" [level=4] [ref=e179]
+        - paragraph [ref=e180]: Folded in muslin, tied with raw cotton, delivered with a hand-written note.
+        - img
+  - generic [ref=e181]:
+    - generic [ref=e182]:
+      - generic [ref=e183]: ۰۵
+      - heading "Write to the studio." [level=2] [ref=e184]:
+        - generic [ref=e185]: Write
+        - generic [ref=e186]: to the
+        - generic [ref=e187]: studio.
+      - paragraph [ref=e188]: For commissions, bridal, press, or a quiet conversation.
+    - generic [ref=e189]:
+      - link "Instagram @studiolailas ↗" [ref=e190] [cursor=pointer]:
+        - /url: https://www.instagram.com/studiolailas
+        - generic [ref=e191]: Instagram
+        - generic [ref=e192]: "@studiolailas ↗"
+      - link "Email hello@studiolailas.com ↗" [ref=e193] [cursor=pointer]:
+        - /url: mailto:hello@studiolailas.com
+        - generic [ref=e194]: Email
+        - generic [ref=e195]: hello@studiolailas.com ↗
+      - link "Studio By appointment, India" [ref=e196] [cursor=pointer]:
+        - /url: "#"
+        - generic [ref=e197]: Studio
+        - generic [ref=e198]: By appointment, India
+      - link "Journal Letters, four times a year" [ref=e199] [cursor=pointer]:
+        - /url: "#"
+        - generic [ref=e200]: Journal
+        - generic [ref=e201]: Letters, four times a year
+    - generic [ref=e202]:
+      - generic [ref=e203]: STUDIO · LAILAS
+      - generic [ref=e204]:
+        - generic [ref=e205]: © 2026 Studio Lailas — All work made by hand, in small numbers.
+        - generic [ref=e206]:
+          - text: Site ·
+          - link "to the top ↑" [ref=e207] [cursor=pointer]:
+            - /url: "#top"
