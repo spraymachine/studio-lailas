@@ -358,31 +358,29 @@ em, .italic { font-style: italic; font-family: var(--serif); font-variation-sett
   border-radius: 2px;
   isolation: isolate;
 }
-/* SAREE / TEXTILE GRADIENTS — bolder */
+/* BLOUSE / DRESS / LEHENGA GRADIENTS */
 .card[data-card="01"] .card__media {
-  /* Kanjivaram dusk crimson + gold */
+  /* Blouse Noor — raw silk, deep rose + gold */
   background:
-    radial-gradient(120% 80% at 30% 20%, #f7c97a 0%, #c8553d 30%, #8a1a32 60%, #3b0815 100%);
+    radial-gradient(120% 80% at 30% 20%, #f7c97a 0%, #c8553d 30%, #7a1230 60%, #2a0e1e 100%);
   aspect-ratio: 4/5;
 }
 .card[data-card="02"] .card__media {
-  /* Chikankari pale ivory + thread */
+  /* Dress Gulnaar — chanderi block-print, sage + ochre */
   background:
-    radial-gradient(120% 100% at 50% 30%, #f8efd8 0%, #d9c8a3 50%, #8a7349 100%);
+    radial-gradient(120% 100% at 50% 20%, #e8d9a0 0%, #9aad7a 40%, #4a6342 100%);
   aspect-ratio: 3/4;
 }
 .card[data-card="03"] .card__media {
-  /* Banarasi tissue indigo + gold */
+  /* Lehenga Mehfil — tissue silk indigo + zari gold */
   background:
     radial-gradient(80% 80% at 30% 30%, #e6b341 0%, #1c2a55 50%, #0a1132 100%);
   aspect-ratio: 1/1;
 }
 .card[data-card="04"] .card__media {
-  /* Bandhani marigold + crimson dot field */
+  /* Blouse Raat — organza evening, deep plum + silver */
   background:
-    radial-gradient(circle at 20% 30%, #f2d27f 0 8px, transparent 9px) 0 0/40px 40px,
-    radial-gradient(circle at 60% 70%, #f2d27f 0 8px, transparent 9px) 0 0/40px 40px,
-    radial-gradient(120% 100% at 50% 30%, #e07a1f, #a01a3a 60%, #3b0815);
+    radial-gradient(120% 100% at 40% 20%, #c8b8d8 0%, #5a3a6a 40%, #1a0828 100%);
 }
 
 /* silk-shine moiré overlay */
