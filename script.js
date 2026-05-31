@@ -10,18 +10,46 @@ const lerp = (a, b, n) => a + (b - a) * n;
 
 /* ---------- design showcase config ---------- */
 const showcaseDesigns = [
-  { src: "reference.jpeg", name: "Mehfil", note: "Royal purple banarasi, gold zari" },
-  { src: "assets/1.jpeg", name: "Design 01", note: "Purple banarasi panel" },
-  { src: "assets/WhatsApp Image 2026-04-28 at 10.48.11.jpeg", name: "Design 02", note: "Purple floral booti" },
-  { src: "assets/WhatsApp Image 2026-04-28 at 10.48.11 (1).jpeg", name: "Design 03", note: "Purple zari kali" },
-  { src: "assets/WhatsApp Image 2026-04-28 at 10.48.11 (2).jpeg", name: "Design 04", note: "Purple zari kali" },
-  { src: "assets/WhatsApp Image 2026-04-28 at 10.48.12.jpeg", name: "Design 05", note: "Sage zigzag zari" },
-  { src: "assets/WhatsApp Image 2026-04-28 at 10.48.12 (1).jpeg", name: "Design 06", note: "Sage zari kali" },
-  { src: "assets/WhatsApp Image 2026-04-28 at 10.48.12 (2).jpeg", name: "Design 07", note: "Sage zari kali" },
-  { src: "assets/WhatsApp Image 2026-04-28 at 10.48.13.jpeg", name: "Design 08", note: "Zari kali panel" },
-  { src: "assets/WhatsApp Image 2026-04-28 at 10.48.13 (1).jpeg", name: "Design 09", note: "Zari kali panel" },
-  { src: "assets/WhatsApp Image 2026-04-28 at 10.48.13 (2).jpeg", name: "Design 10", note: "Zari kali panel" },
-  { src: "assets/WhatsApp Image 2026-04-28 at 10.48.14.jpeg", name: "Design 11", note: "Zari kali panel" },
+  {
+    src: "assets/showcase/01-purple-silver-brocade.jpeg",
+    name: "Purple Silver Brocade",
+    note: "Royal purple lehenga with silver zari brocade",
+  },
+  {
+    src: "assets/showcase/02-mustard-vine-maroon-border.jpeg",
+    name: "Mustard Vine Border",
+    note: "Mustard lehenga with vine embroidery and maroon border",
+  },
+  {
+    src: "assets/showcase/03-purple-fan-chevron.jpeg",
+    name: "Purple Fan Chevron",
+    note: "Purple lehenga with silver fan motifs and chevron border",
+  },
+  {
+    src: "assets/showcase/04-purple-gold-lotus-arch.jpeg",
+    name: "Purple Lotus Arch",
+    note: "Purple lehenga with gold lotus arches and wide zari hem",
+  },
+  {
+    src: "assets/showcase/05-rust-fan-chevron.jpeg",
+    name: "Rust Fan Chevron",
+    note: "Rust lehenga with gold fan motifs and chevron border",
+  },
+  {
+    src: "assets/showcase/06-purple-gold-buti-medallion.jpeg",
+    name: "Purple Buti Medallion",
+    note: "Purple lehenga with gold buti columns and medallion hem",
+  },
+  {
+    src: "assets/showcase/07-ice-blue-zigzag.jpeg",
+    name: "Ice Blue Zigzag",
+    note: "Ice blue lehenga with pale gold zigzag zari",
+  },
+  {
+    src: "assets/showcase/08-pistachio-gold-buti.jpeg",
+    name: "Pistachio Gold Buti",
+    note: "Pistachio lehenga with gold buti rows and woven hem",
+  },
 ];
 
 /* ---------- custom cursor ---------- */
@@ -357,12 +385,13 @@ const showcase = () => {
 
   const swap = (src) => {
     if (reduce) { stageImg.src = src; return; }
-    // GPU-safe crossfade: opacity only, premium expo ease on the reveal
+    // Blur-masked crossfade (Emil): blur bridges the two overlapping frames so the
+    // eye reads one transformation, not two images swapping. transform/opacity/filter only.
     gsap.to(stageImg, {
-      opacity: 0, duration: 0.3, ease: "power3.in",
+      opacity: 0, filter: "blur(8px)", duration: 0.2, ease: "power2.in",
       onComplete: () => {
         stageImg.src = src;
-        gsap.to(stageImg, { opacity: 1, duration: 0.55, ease: "expo.out" });
+        gsap.to(stageImg, { opacity: 1, filter: "blur(0px)", duration: 0.34, ease: "expo.out" });
       },
     });
   };
@@ -386,11 +415,13 @@ const showcase = () => {
     }
   });
 
-  // Heavy cinematic fade-up with blur (GPU-safe: transform/opacity/filter only)
-  gsap.from(".showcase__stage", {
+  // Heavy cinematic fade-up with blur (GPU-safe: transform/opacity/filter only).
+  // Target the wrapper so the inline transform is cleared afterwards, leaving the
+  // stage itself free for its CSS :hover lift.
+  gsap.from(".showcase__stage-wrap", {
     y: 60, opacity: 0, filter: "blur(12px)", duration: 1.1, ease: "expo.out",
     scrollTrigger: { trigger: ".showcase", start: "top 78%" },
-    clearProps: "filter",
+    clearProps: "transform,filter",
   });
   gsap.from(".showcase__thumb", {
     y: 24, opacity: 0, filter: "blur(6px)", duration: 0.7, stagger: 0.06, ease: "expo.out",

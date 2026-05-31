@@ -658,21 +658,57 @@ em, .italic { font-style: italic; font-family: var(--serif); font-variation-sett
 }
 
 /* ============ SHOWCASE ============ */
-.showcase { padding: clamp(96px, 14vh, 180px) var(--pad); position: relative; }
+/* The whole component fits within one viewport — never overflows the screen.
+   Section is a centered flex column; the stage is height-driven (height fills
+   the available space, width follows the 3/4.5 aspect-ratio). */
+.showcase {
+  height: 100dvh;
+  display: flex; flex-direction: column; justify-content: center;
+  padding: clamp(24px, 4vh, 56px) var(--pad);
+  position: relative;
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+}
 .showcase:focus { outline: none; }
+.showcase > .section-head { flex: none; }
 
+/* Zing: a soft ambient glow blooming behind the stage — gives the arch depth and
+   lifts it off the cream. Decorative, pointer-events:none, sits behind content. */
+.showcase::before {
+  content: "";
+  position: absolute; z-index: 0;
+  left: 50%; top: 54%; transform: translate(-50%, -50%);
+  width: min(58vw, 600px); height: min(72vh, 780px);
+  background:
+    radial-gradient(closest-side, rgba(184, 134, 44, 0.22), transparent 72%),
+    radial-gradient(closest-side, rgba(160, 26, 58, 0.13), transparent 76%);
+  filter: blur(46px);
+  pointer-events: none;
+}
+.showcase > * { position: relative; z-index: 1; }
+
+/* Stage + rail are one centered group: stage width is auto (height-driven),
+   rail hugs it with a tight gap. No more orphaned rail floating far right. */
 .showcase__layout {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 148px;
-  gap: clamp(28px, 4vw, 64px);
-  align-items: start;
-  max-width: 1120px;
-  margin: 56px auto 0;
+  flex: 1 1 auto; min-height: 0;
+  display: flex; justify-content: center; align-items: stretch;
+  gap: clamp(16px, 1.6vw, 28px);
+  max-width: 1120px; width: 100%;
+  margin: clamp(16px, 3vh, 40px) auto 0;
 }
 
-/* Double-bezel: outer tray (shell) holds an inner core, concentric radii */
+.showcase__stage-wrap {
+  flex: 0 0 auto;
+  display: flex; justify-content: center; align-items: center;
+  min-width: 0; min-height: 0;
+}
+
+/* Double-bezel: outer tray (shell) holds an inner core, concentric radii.
+   Height-driven so the tray hugs the image and the whole stage fits the viewport. */
 .showcase__stage {
   position: relative;
+  display: flex;
+  height: 100%; width: auto; max-width: 100%;
+  aspect-ratio: 3 / 4.5;
   padding: 8px;
   background: rgba(42, 14, 30, 0.04);
   border: 1px solid var(--line);
@@ -682,9 +718,25 @@ em, .italic { font-style: italic; font-family: var(--serif); font-variation-sett
     inset 0 1px 1px rgba(245, 236, 217, 0.55);
   will-change: transform;
 }
+/* Zing: gentle hover lift on the stage. Reveal animation targets the wrapper
+   (and clears its transform), so the stage is free for this CSS hover. */
+@media (hover: hover) and (pointer: fine) {
+  .showcase__stage {
+    transition:
+      transform 450ms var(--ease-out),
+      box-shadow 450ms var(--ease-out);
+  }
+  .showcase__stage:hover {
+    transform: translateY(-5px) scale(1.012);
+    box-shadow:
+      0 66px 120px -54px rgba(42, 14, 30, 0.58),
+      inset 0 1px 1px rgba(245, 236, 217, 0.55);
+  }
+}
+
 .showcase__core {
   position: relative;
-  aspect-ratio: 3 / 4.5;
+  flex: 1 1 auto; width: 100%;
   overflow: hidden;
   background: var(--cream-2);
   border-radius:
@@ -713,12 +765,14 @@ em, .italic { font-style: italic; font-family: var(--serif); font-variation-sett
 }
 
 .showcase__rail-wrap {
-  display: flex; flex-direction: column; align-items: center; gap: 16px;
-  position: sticky; top: 100px;
+  flex: 0 0 124px;
+  display: flex; flex-direction: column; align-items: center; gap: 14px;
+  height: 100%; min-height: 0;
 }
 .showcase__rail {
   display: flex; flex-direction: column; gap: 14px;
-  overflow-y: auto; max-height: 62vh; padding: 6px;
+  flex: 1 1 auto; min-height: 0;
+  overflow-y: auto; padding: 6px;
   scrollbar-width: thin; scrollbar-color: var(--line) transparent;
 }
 .showcase__rail::-webkit-scrollbar { width: 6px; }
@@ -737,7 +791,10 @@ em, .italic { font-style: italic; font-family: var(--serif); font-variation-sett
   will-change: transform;
 }
 .showcase__thumb img { width: 100%; height: 100%; object-fit: cover; display: block; border-radius: 8px; }
-.showcase__thumb:hover { opacity: 0.92; transform: translateY(-3px) scale(1.03); }
+/* Gate hover behind a real pointer — touch taps shouldn't trigger the lift */
+@media (hover: hover) and (pointer: fine) {
+  .showcase__thumb:hover { opacity: 0.92; transform: translateY(-3px) scale(1.03); }
+}
 .showcase__thumb:active { transform: scale(0.97); }
 .showcase__thumb.is-active {
   opacity: 1; border-color: var(--gold);
@@ -767,15 +824,17 @@ em, .italic { font-style: italic; font-family: var(--serif); font-variation-sett
 }
 
 @media (max-width: 800px) {
-  /* minmax(0,1fr) + min-width:0 lets the rail scroll instead of blowing out the grid track */
-  .showcase__layout { grid-template-columns: minmax(0, 1fr); }
-  .showcase__stage-wrap, .showcase__rail-wrap, .showcase__rail { min-width: 0; }
-  .showcase__rail-wrap { flex-direction: row; position: static; top: auto; width: 100%; }
+  /* Stack vertically: stage fills the remaining height, thumb strip sits below it.
+     min-width:0 lets the horizontal rail scroll instead of blowing out the track. */
+  .showcase__layout { flex-direction: column; }
+  .showcase__stage-wrap { flex: 1 1 auto; min-width: 0; min-height: 0; }
+  .showcase__rail-wrap, .showcase__rail { min-width: 0; }
+  .showcase__rail-wrap { flex: 0 0 auto; flex-direction: row; height: auto; width: 100%; }
   .showcase__rail {
-    flex-direction: row; max-height: none;
-    overflow-x: auto; overflow-y: hidden; flex: 1 1 auto;
+    flex-direction: row; height: auto; flex: 1 1 auto;
+    overflow-x: auto; overflow-y: hidden;
   }
-  .showcase__thumb { width: 88px; }
+  .showcase__thumb { width: 76px; }
   .showcase__arrow .g-v { display: none; }
   .showcase__arrow .g-h { display: block; }
 }
