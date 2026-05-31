@@ -1,3 +1,7 @@
 .playwright-mcp/
 *.png
 /tmp/
+
+.superpowers/
+.DS_Store
+**/.DS_Store

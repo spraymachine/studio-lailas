@@ -8,6 +8,22 @@ const qs = (s, r = document) => r.querySelector(s);
 const qsa = (s, r = document) => [...r.querySelectorAll(s)];
 const lerp = (a, b, n) => a + (b - a) * n;
 
+/* ---------- design showcase config ---------- */
+const showcaseDesigns = [
+  { src: "reference.jpeg", name: "Mehfil", note: "Royal purple banarasi, gold zari" },
+  { src: "assets/1.jpeg", name: "Design 01", note: "Purple banarasi panel" },
+  { src: "assets/WhatsApp Image 2026-04-28 at 10.48.11.jpeg", name: "Design 02", note: "Purple floral booti" },
+  { src: "assets/WhatsApp Image 2026-04-28 at 10.48.11 (1).jpeg", name: "Design 03", note: "Purple zari kali" },
+  { src: "assets/WhatsApp Image 2026-04-28 at 10.48.11 (2).jpeg", name: "Design 04", note: "Purple zari kali" },
+  { src: "assets/WhatsApp Image 2026-04-28 at 10.48.12.jpeg", name: "Design 05", note: "Sage zigzag zari" },
+  { src: "assets/WhatsApp Image 2026-04-28 at 10.48.12 (1).jpeg", name: "Design 06", note: "Sage zari kali" },
+  { src: "assets/WhatsApp Image 2026-04-28 at 10.48.12 (2).jpeg", name: "Design 07", note: "Sage zari kali" },
+  { src: "assets/WhatsApp Image 2026-04-28 at 10.48.13.jpeg", name: "Design 08", note: "Zari kali panel" },
+  { src: "assets/WhatsApp Image 2026-04-28 at 10.48.13 (1).jpeg", name: "Design 09", note: "Zari kali panel" },
+  { src: "assets/WhatsApp Image 2026-04-28 at 10.48.13 (2).jpeg", name: "Design 10", note: "Zari kali panel" },
+  { src: "assets/WhatsApp Image 2026-04-28 at 10.48.14.jpeg", name: "Design 11", note: "Zari kali panel" },
+];
+
 /* ---------- custom cursor ---------- */
 (() => {
   const cursor = qs(".cursor");
@@ -274,6 +290,117 @@ const contact = () => {
   );
 };
 
+/* ---------- design showcase ---------- */
+const showcase = () => {
+  const stageImg = qs("#showcaseImg");
+  const rail = qs("#showcaseRail");
+  const idxEl = qs("#showcaseIndex");
+  const nameEl = qs("#showcaseName");
+  const liveEl = qs("#showcaseLive");
+  const prevBtn = qs("#showcasePrev");
+  const nextBtn = qs("#showcaseNext");
+  const section = qs("#showcase");
+  if (!stageImg || !rail || !section) return;
+
+  const designs = showcaseDesigns;
+  const total = designs.length;
+  let active = 0;
+  const thumbs = [];
+  const cursor = qs(".cursor");
+
+  designs.forEach((d, i) => {
+    const btn = document.createElement("button");
+    btn.className = "showcase__thumb";
+    btn.type = "button";
+    btn.setAttribute("aria-label", `Show ${d.name}`);
+    const img = document.createElement("img");
+    img.src = d.src;
+    img.alt = "";
+    img.loading = "lazy";
+    btn.appendChild(img);
+    btn.addEventListener("click", () => select(i));
+    btn.addEventListener("mouseenter", () => cursor && cursor.classList.add("is-hover"));
+    btn.addEventListener("mouseleave", () => cursor && cursor.classList.remove("is-hover"));
+    rail.appendChild(btn);
+    thumbs.push(btn);
+  });
+
+  const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  const preload = (i) => {
+    const im = new Image();
+    im.src = designs[(i + total) % total].src;
+  };
+
+  const render = (scrollThumb = false) => {
+    const d = designs[active];
+    idxEl.textContent =
+      `${String(active + 1).padStart(2, "0")} / ${String(total).padStart(2, "0")}`;
+    nameEl.textContent = d.name;
+    stageImg.alt = `${d.name} — ${d.note}`;
+    liveEl.textContent = `Showing design ${active + 1} of ${total}: ${d.name}`;
+    thumbs.forEach((t, i) => {
+      const on = i === active;
+      t.classList.toggle("is-active", on);
+      if (on) t.setAttribute("aria-current", "true");
+      else t.removeAttribute("aria-current");
+    });
+    // Only scroll the rail on user-driven selection — never nudge the page on initial render
+    if (scrollThumb) {
+      thumbs[active].scrollIntoView({
+        block: "nearest", inline: "nearest", behavior: reduce ? "auto" : "smooth",
+      });
+    }
+    preload(active + 1);
+    preload(active - 1);
+  };
+
+  const swap = (src) => {
+    if (reduce) { stageImg.src = src; return; }
+    // GPU-safe crossfade: opacity only, premium expo ease on the reveal
+    gsap.to(stageImg, {
+      opacity: 0, duration: 0.3, ease: "power3.in",
+      onComplete: () => {
+        stageImg.src = src;
+        gsap.to(stageImg, { opacity: 1, duration: 0.55, ease: "expo.out" });
+      },
+    });
+  };
+
+  function select(i) {
+    active = (i + total) % total;
+    swap(designs[active].src);
+    render(true);
+  }
+
+  prevBtn.addEventListener("click", () => select(active - 1));
+  nextBtn.addEventListener("click", () => select(active + 1));
+
+  section.addEventListener("keydown", (e) => {
+    if (e.key === "ArrowLeft") {
+      e.preventDefault();
+      select(active - 1);
+    } else if (e.key === "ArrowRight") {
+      e.preventDefault();
+      select(active + 1);
+    }
+  });
+
+  // Heavy cinematic fade-up with blur (GPU-safe: transform/opacity/filter only)
+  gsap.from(".showcase__stage", {
+    y: 60, opacity: 0, filter: "blur(12px)", duration: 1.1, ease: "expo.out",
+    scrollTrigger: { trigger: ".showcase", start: "top 78%" },
+    clearProps: "filter",
+  });
+  gsap.from(".showcase__thumb", {
+    y: 24, opacity: 0, filter: "blur(6px)", duration: 0.7, stagger: 0.06, ease: "expo.out",
+    scrollTrigger: { trigger: ".showcase__rail-wrap", start: "top 85%" },
+    clearProps: "filter,opacity",
+  });
+
+  render();
+};
+
 /* ---------- boot ---------- */
 window.addEventListener("load", async () => {
   gsap.set(".hero__row .word", { y: "110%" });
@@ -286,5 +413,6 @@ window.addEventListener("load", async () => {
   gallery();
   atelier();
   contact();
+  showcase();
   ScrollTrigger.refresh();
 });
