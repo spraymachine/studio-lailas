@@ -81,10 +81,12 @@ Insert the new section between them so it becomes:
   <div class="showcase__layout">
     <div class="showcase__stage-wrap">
       <div class="showcase__stage" id="showcaseStage">
-        <img class="showcase__img" id="showcaseImg" src="reference.jpeg" alt="" />
-        <div class="showcase__caption">
-          <span class="showcase__index" id="showcaseIndex">01 / 01</span>
-          <span class="showcase__name" id="showcaseName"></span>
+        <div class="showcase__core">
+          <img class="showcase__img" id="showcaseImg" src="reference.jpeg" alt="" />
+          <div class="showcase__caption">
+            <span class="showcase__index" id="showcaseIndex">01 / 01</span>
+            <span class="showcase__name" id="showcaseName"></span>
+          </div>
         </div>
       </div>
     </div>
@@ -171,73 +173,111 @@ Append to the end of `style.css`:
 
 ```css
 /* ============ SHOWCASE ============ */
-.showcase { padding: clamp(60px, 10vh, 140px) var(--pad); position: relative; }
+/* fluid spring easing (high-end motion) — declared again to merge into :root */
+:root { --ease-fluid: cubic-bezier(0.32, 0.72, 0, 1); }
+
+.showcase { padding: clamp(96px, 14vh, 180px) var(--pad); position: relative; }
 .showcase:focus { outline: none; }
 
 .showcase__layout {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 140px;
-  gap: clamp(20px, 3vw, 48px);
+  grid-template-columns: minmax(0, 1fr) 148px;
+  gap: clamp(28px, 4vw, 64px);
   align-items: start;
   max-width: 1120px;
-  margin: 48px auto 0;
+  margin: 56px auto 0;
 }
 
+/* Double-bezel: outer tray (shell) holds an inner core, concentric radii */
 .showcase__stage {
   position: relative;
-  aspect-ratio: 3 / 4.5;
-  border-radius: 48% 48% 12px 12px / 20% 20% 3% 3%;
-  overflow: hidden;
+  padding: 8px;
+  background: rgba(42, 14, 30, 0.04);
   border: 1px solid var(--line);
-  background: var(--cream-2);
-  box-shadow: 0 34px 70px -34px rgba(42, 14, 30, 0.5);
+  border-radius: 52% 52% 18px 18px / 22% 22% 5% 5%;
+  box-shadow:
+    0 50px 90px -50px rgba(42, 14, 30, 0.45),
+    inset 0 1px 1px rgba(245, 236, 217, 0.55);
+  will-change: transform;
 }
-.showcase__img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.showcase__core {
+  position: relative;
+  aspect-ratio: 3 / 4.5;
+  overflow: hidden;
+  background: var(--cream-2);
+  border-radius:
+    calc(52% - 8px) calc(52% - 8px) 12px 12px /
+    20% 20% 4% 4%;
+  box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.18);
+}
+.showcase__img {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+  will-change: opacity;
+}
 
 .showcase__caption {
   position: absolute; left: 0; right: 0; bottom: 0;
   display: flex; justify-content: space-between; align-items: baseline; gap: 16px;
-  padding: 40px 24px 18px;
-  background: linear-gradient(to top, rgba(42, 14, 30, 0.72), transparent);
+  padding: 48px 26px 20px;
+  background: linear-gradient(to top, rgba(42, 14, 30, 0.74), transparent);
   color: var(--cream);
   pointer-events: none;
 }
 .showcase__index { font-family: var(--mono); font-size: 12px; letter-spacing: 0.08em; }
-.showcase__name { font-family: var(--serif); font-style: italic; font-size: clamp(18px, 2.4vw, 26px); text-align: right; }
+.showcase__name {
+  font-family: var(--serif); font-style: italic;
+  font-size: clamp(18px, 2.4vw, 27px); text-align: right;
+  font-variation-settings: "SOFT" 100, "WONK" 1;
+}
 
 .showcase__rail-wrap {
-  display: flex; flex-direction: column; align-items: center; gap: 14px;
+  display: flex; flex-direction: column; align-items: center; gap: 16px;
   position: sticky; top: 100px;
 }
 .showcase__rail {
-  display: flex; flex-direction: column; gap: 12px;
-  overflow-y: auto; max-height: 62vh; padding: 4px;
+  display: flex; flex-direction: column; gap: 14px;
+  overflow-y: auto; max-height: 62vh; padding: 6px;
   scrollbar-width: thin; scrollbar-color: var(--line) transparent;
 }
 .showcase__rail::-webkit-scrollbar { width: 6px; }
 .showcase__rail::-webkit-scrollbar-thumb { background: var(--line); border-radius: 999px; }
 
 .showcase__thumb {
-  flex: 0 0 auto; width: 104px; aspect-ratio: 3 / 4; padding: 0;
-  border: 1px solid transparent; border-radius: 6px; overflow: hidden;
-  background: none; cursor: none; opacity: 0.6;
-  transition: opacity 0.3s ease, border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  flex: 0 0 auto; width: 108px; aspect-ratio: 3 / 4; padding: 4px;
+  border: 1px solid transparent; border-radius: 12px; overflow: hidden;
+  background: rgba(42, 14, 30, 0.03);
+  cursor: none; opacity: 0.55;
+  transition:
+    opacity 0.5s var(--ease-fluid),
+    border-color 0.5s var(--ease-fluid),
+    transform 0.6s var(--ease-fluid),
+    box-shadow 0.5s var(--ease-fluid);
+  will-change: transform;
 }
-.showcase__thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
-.showcase__thumb:hover { opacity: 0.9; transform: translateY(-2px); }
-.showcase__thumb.is-active { opacity: 1; border-color: var(--gold); box-shadow: 0 0 0 2px var(--gold-2); }
+.showcase__thumb img { width: 100%; height: 100%; object-fit: cover; display: block; border-radius: 8px; }
+.showcase__thumb:hover { opacity: 0.92; transform: translateY(-3px) scale(1.03); }
+.showcase__thumb:active { transform: scale(0.97); }
+.showcase__thumb.is-active {
+  opacity: 1; border-color: var(--gold);
+  box-shadow: 0 0 0 1px var(--gold-2), 0 12px 24px -14px rgba(42, 14, 30, 0.5);
+}
 
 .showcase__arrow {
-  width: 40px; height: 40px; border-radius: 999px;
-  border: 1px solid var(--ink); background: var(--cream); color: var(--ink);
+  width: 44px; height: 44px; border-radius: 999px;
+  border: 1px solid var(--line); background: var(--cream); color: var(--ink);
   cursor: none; display: grid; place-items: center; font-size: 13px; line-height: 1;
-  transition: background 0.3s ease, color 0.3s ease;
+  transition:
+    background 0.5s var(--ease-fluid),
+    color 0.5s var(--ease-fluid),
+    transform 0.5s var(--ease-fluid);
+  will-change: transform;
 }
 .showcase__arrow:hover { background: var(--ink); color: var(--cream); }
+.showcase__arrow:active { transform: scale(0.92); }
 .showcase__arrow .g-h { display: none; }
 
 .showcase__thumb:focus-visible,
-.showcase__arrow:focus-visible { outline: 2px solid var(--crimson); outline-offset: 2px; }
+.showcase__arrow:focus-visible { outline: 2px solid var(--crimson); outline-offset: 3px; }
 
 .sr-only {
   position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
@@ -251,11 +291,13 @@ Append to the end of `style.css`:
     flex-direction: row; max-height: none;
     overflow-x: auto; overflow-y: hidden; flex: 1 1 auto;
   }
-  .showcase__thumb { width: 84px; }
+  .showcase__thumb { width: 88px; }
   .showcase__arrow .g-v { display: none; }
   .showcase__arrow .g-h { display: block; }
 }
 ```
+
+Note: `.showcase__core` is the inner core div added to the Task 1 markup. The concentric radius (`calc(52% - 8px)` etc.) keeps the inner curve parallel to the outer tray — the "machined hardware" look.
 
 - [ ] **Step 2: Verify the stage and layout render**
 
@@ -432,11 +474,12 @@ with:
 
   const swap = (src) => {
     if (reduce) { stageImg.src = src; return; }
+    // GPU-safe crossfade: opacity only, premium expo ease on the reveal
     gsap.to(stageImg, {
-      opacity: 0, duration: 0.25, ease: "power2.in",
+      opacity: 0, duration: 0.3, ease: "power3.in",
       onComplete: () => {
         stageImg.src = src;
-        gsap.to(stageImg, { opacity: 1, duration: 0.35, ease: "power2.out" });
+        gsap.to(stageImg, { opacity: 1, duration: 0.55, ease: "expo.out" });
       },
     });
   };
@@ -550,15 +593,20 @@ git commit -m "feat: showcase arrow + keyboard navigation with looping"
 In `script.js`, inside `showcase()`, immediately before the final `render();` line (after the keyboard handler from Task 5), add:
 
 ```js
+  // Heavy cinematic fade-up with blur (GPU-safe: transform/opacity/filter only)
   gsap.from(".showcase__stage", {
-    y: 50, opacity: 0, duration: 1, ease: "power3.out",
-    scrollTrigger: { trigger: ".showcase", start: "top 75%" },
+    y: 60, opacity: 0, filter: "blur(12px)", duration: 1.1, ease: "expo.out",
+    scrollTrigger: { trigger: ".showcase", start: "top 78%" },
+    clearProps: "filter",
   });
   gsap.from(".showcase__thumb", {
-    y: 20, opacity: 0, duration: 0.6, stagger: 0.05, ease: "power3.out",
+    y: 24, opacity: 0, filter: "blur(6px)", duration: 0.7, stagger: 0.06, ease: "expo.out",
     scrollTrigger: { trigger: ".showcase__rail-wrap", start: "top 85%" },
+    clearProps: "filter",
   });
 ```
+
+Note: `clearProps: "filter"` removes the inline blur after the tween so the resting element is pixel-sharp and not stuck behind a filter.
 
 - [ ] **Step 2: Verify reveal does not leave elements hidden after scroll**
 
