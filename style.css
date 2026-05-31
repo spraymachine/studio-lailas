@@ -16,6 +16,7 @@
   --sans: "Geist", system-ui, sans-serif;
   --mono: "Geist Mono", ui-monospace, monospace;
   --pad: clamp(20px, 4vw, 64px);
+  --ease-fluid: cubic-bezier(0.32, 0.72, 0, 1); /* fluid spring easing (high-end motion) */
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -657,9 +658,6 @@ em, .italic { font-style: italic; font-family: var(--serif); font-variation-sett
 }
 
 /* ============ SHOWCASE ============ */
-/* fluid spring easing (high-end motion) — declared again to merge into :root */
-:root { --ease-fluid: cubic-bezier(0.32, 0.72, 0, 1); }
-
 .showcase { padding: clamp(96px, 14vh, 180px) var(--pad); position: relative; }
 .showcase:focus { outline: none; }
 

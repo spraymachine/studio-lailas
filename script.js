@@ -332,7 +332,7 @@ const showcase = () => {
     im.src = designs[(i + total) % total].src;
   };
 
-  const render = () => {
+  const render = (scrollThumb = false) => {
     const d = designs[active];
     idxEl.textContent =
       `${String(active + 1).padStart(2, "0")} / ${String(total).padStart(2, "0")}`;
@@ -345,9 +345,12 @@ const showcase = () => {
       if (on) t.setAttribute("aria-current", "true");
       else t.removeAttribute("aria-current");
     });
-    thumbs[active].scrollIntoView({
-      block: "nearest", inline: "nearest", behavior: reduce ? "auto" : "smooth",
-    });
+    // Only scroll the rail on user-driven selection — never nudge the page on initial render
+    if (scrollThumb) {
+      thumbs[active].scrollIntoView({
+        block: "nearest", inline: "nearest", behavior: reduce ? "auto" : "smooth",
+      });
+    }
     preload(active + 1);
     preload(active - 1);
   };
@@ -367,17 +370,17 @@ const showcase = () => {
   function select(i) {
     active = (i + total) % total;
     swap(designs[active].src);
-    render();
+    render(true);
   }
 
   prevBtn.addEventListener("click", () => select(active - 1));
   nextBtn.addEventListener("click", () => select(active + 1));
 
   section.addEventListener("keydown", (e) => {
-    if (e.key === "ArrowLeft" || e.key === "ArrowUp") {
+    if (e.key === "ArrowLeft") {
       e.preventDefault();
       select(active - 1);
-    } else if (e.key === "ArrowRight" || e.key === "ArrowDown") {
+    } else if (e.key === "ArrowRight") {
       e.preventDefault();
       select(active + 1);
     }
