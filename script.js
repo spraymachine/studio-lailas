@@ -325,8 +325,52 @@ const showcase = () => {
     thumbs.push(btn);
   });
 
-  // select() and render() are added in Task 4. Temporary stub so clicks don't error:
-  function select(i) { active = (i + total) % total; }
+  const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  const preload = (i) => {
+    const im = new Image();
+    im.src = designs[(i + total) % total].src;
+  };
+
+  const render = () => {
+    const d = designs[active];
+    idxEl.textContent =
+      `${String(active + 1).padStart(2, "0")} / ${String(total).padStart(2, "0")}`;
+    nameEl.textContent = d.name;
+    stageImg.alt = `${d.name} — ${d.note}`;
+    liveEl.textContent = `Showing design ${active + 1} of ${total}: ${d.name}`;
+    thumbs.forEach((t, i) => {
+      const on = i === active;
+      t.classList.toggle("is-active", on);
+      if (on) t.setAttribute("aria-current", "true");
+      else t.removeAttribute("aria-current");
+    });
+    thumbs[active].scrollIntoView({
+      block: "nearest", inline: "nearest", behavior: reduce ? "auto" : "smooth",
+    });
+    preload(active + 1);
+    preload(active - 1);
+  };
+
+  const swap = (src) => {
+    if (reduce) { stageImg.src = src; return; }
+    // GPU-safe crossfade: opacity only, premium expo ease on the reveal
+    gsap.to(stageImg, {
+      opacity: 0, duration: 0.3, ease: "power3.in",
+      onComplete: () => {
+        stageImg.src = src;
+        gsap.to(stageImg, { opacity: 1, duration: 0.55, ease: "expo.out" });
+      },
+    });
+  };
+
+  function select(i) {
+    active = (i + total) % total;
+    swap(designs[active].src);
+    render();
+  }
+
+  render();
 };
 
 /* ---------- boot ---------- */
