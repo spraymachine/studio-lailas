@@ -202,29 +202,7 @@ const manifesto = () => {
 };
 
 /* ---------- works cards entry ---------- */
-const works = () => {
-  qsa(".card").forEach((card) => {
-    gsap.from(card.querySelector(".card__media"), {
-      yPercent: 12,
-      ease: "none",
-      scrollTrigger: { trigger: card, start: "top bottom", end: "bottom top", scrub: true },
-    });
-    gsap.from(card.querySelector(".card__body"), {
-      y: 40,
-      opacity: 0,
-      duration: 1,
-      ease: "power3.out",
-      scrollTrigger: { trigger: card, start: "top 75%" },
-    });
-    gsap.from(card.querySelector(".card__no"), {
-      x: -20,
-      opacity: 0,
-      duration: 0.8,
-      ease: "power3.out",
-      scrollTrigger: { trigger: card, start: "top 80%" },
-    });
-  });
-
+const sectionHeads = () => {
   qsa(".section-head").forEach((sh) => {
     gsap.from(sh.children, {
       y: 30, opacity: 0, duration: 0.9, ease: "power3.out", stagger: 0.08,
@@ -440,7 +418,7 @@ window.addEventListener("load", async () => {
   platePara();
   marquee();
   manifesto();
-  works();
+  sectionHeads();
   gallery();
   atelier();
   contact();
