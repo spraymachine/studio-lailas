@@ -370,6 +370,19 @@ const showcase = () => {
     render();
   }
 
+  prevBtn.addEventListener("click", () => select(active - 1));
+  nextBtn.addEventListener("click", () => select(active + 1));
+
+  section.addEventListener("keydown", (e) => {
+    if (e.key === "ArrowLeft" || e.key === "ArrowUp") {
+      e.preventDefault();
+      select(active - 1);
+    } else if (e.key === "ArrowRight" || e.key === "ArrowDown") {
+      e.preventDefault();
+      select(active + 1);
+    }
+  });
+
   render();
 };
 
