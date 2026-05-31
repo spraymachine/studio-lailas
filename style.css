@@ -769,7 +769,9 @@ em, .italic { font-style: italic; font-family: var(--serif); font-variation-sett
 }
 
 @media (max-width: 800px) {
-  .showcase__layout { grid-template-columns: 1fr; }
+  /* minmax(0,1fr) + min-width:0 lets the rail scroll instead of blowing out the grid track */
+  .showcase__layout { grid-template-columns: minmax(0, 1fr); }
+  .showcase__stage-wrap, .showcase__rail-wrap, .showcase__rail { min-width: 0; }
   .showcase__rail-wrap { flex-direction: row; position: static; top: auto; width: 100%; }
   .showcase__rail {
     flex-direction: row; max-height: none;
