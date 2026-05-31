@@ -8,6 +8,22 @@ const qs = (s, r = document) => r.querySelector(s);
 const qsa = (s, r = document) => [...r.querySelectorAll(s)];
 const lerp = (a, b, n) => a + (b - a) * n;
 
+/* ---------- design showcase config ---------- */
+const showcaseDesigns = [
+  { src: "reference.jpeg", name: "Mehfil", note: "Royal purple banarasi, gold zari" },
+  { src: "assets/1.jpeg", name: "Design 01", note: "Purple banarasi panel" },
+  { src: "assets/WhatsApp Image 2026-04-28 at 10.48.11.jpeg", name: "Design 02", note: "Purple floral booti" },
+  { src: "assets/WhatsApp Image 2026-04-28 at 10.48.11 (1).jpeg", name: "Design 03", note: "Purple zari kali" },
+  { src: "assets/WhatsApp Image 2026-04-28 at 10.48.11 (2).jpeg", name: "Design 04", note: "Purple zari kali" },
+  { src: "assets/WhatsApp Image 2026-04-28 at 10.48.12.jpeg", name: "Design 05", note: "Sage zigzag zari" },
+  { src: "assets/WhatsApp Image 2026-04-28 at 10.48.12 (1).jpeg", name: "Design 06", note: "Sage zari kali" },
+  { src: "assets/WhatsApp Image 2026-04-28 at 10.48.12 (2).jpeg", name: "Design 07", note: "Sage zari kali" },
+  { src: "assets/WhatsApp Image 2026-04-28 at 10.48.13.jpeg", name: "Design 08", note: "Zari kali panel" },
+  { src: "assets/WhatsApp Image 2026-04-28 at 10.48.13 (1).jpeg", name: "Design 09", note: "Zari kali panel" },
+  { src: "assets/WhatsApp Image 2026-04-28 at 10.48.13 (2).jpeg", name: "Design 10", note: "Zari kali panel" },
+  { src: "assets/WhatsApp Image 2026-04-28 at 10.48.14.jpeg", name: "Design 11", note: "Zari kali panel" },
+];
+
 /* ---------- custom cursor ---------- */
 (() => {
   const cursor = qs(".cursor");
@@ -274,6 +290,45 @@ const contact = () => {
   );
 };
 
+/* ---------- design showcase ---------- */
+const showcase = () => {
+  const stageImg = qs("#showcaseImg");
+  const rail = qs("#showcaseRail");
+  const idxEl = qs("#showcaseIndex");
+  const nameEl = qs("#showcaseName");
+  const liveEl = qs("#showcaseLive");
+  const prevBtn = qs("#showcasePrev");
+  const nextBtn = qs("#showcaseNext");
+  const section = qs("#showcase");
+  if (!stageImg || !rail || !section) return;
+
+  const designs = showcaseDesigns;
+  const total = designs.length;
+  let active = 0;
+  const thumbs = [];
+  const cursor = qs(".cursor");
+
+  designs.forEach((d, i) => {
+    const btn = document.createElement("button");
+    btn.className = "showcase__thumb";
+    btn.type = "button";
+    btn.setAttribute("aria-label", `Show ${d.name}`);
+    const img = document.createElement("img");
+    img.src = d.src;
+    img.alt = "";
+    img.loading = "lazy";
+    btn.appendChild(img);
+    btn.addEventListener("click", () => select(i));
+    btn.addEventListener("mouseenter", () => cursor && cursor.classList.add("is-hover"));
+    btn.addEventListener("mouseleave", () => cursor && cursor.classList.remove("is-hover"));
+    rail.appendChild(btn);
+    thumbs.push(btn);
+  });
+
+  // select() and render() are added in Task 4. Temporary stub so clicks don't error:
+  function select(i) { active = (i + total) % total; }
+};
+
 /* ---------- boot ---------- */
 window.addEventListener("load", async () => {
   gsap.set(".hero__row .word", { y: "110%" });
@@ -286,5 +341,6 @@ window.addEventListener("load", async () => {
   gallery();
   atelier();
   contact();
+  showcase();
   ScrollTrigger.refresh();
 });
