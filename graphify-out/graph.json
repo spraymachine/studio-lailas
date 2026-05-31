@@ -1,0 +1,406 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "label": "script.js",
+      "file_type": "code",
+      "source_file": "script.js",
+      "source_location": "L1",
+      "id": "script_js",
+      "community": 0
+    },
+    {
+      "label": "qs()",
+      "file_type": "code",
+      "source_file": "script.js",
+      "source_location": "L7",
+      "id": "script_qs",
+      "community": 1
+    },
+    {
+      "label": "qsa()",
+      "file_type": "code",
+      "source_file": "script.js",
+      "source_location": "L8",
+      "id": "script_qsa",
+      "community": 2
+    },
+    {
+      "label": "lerp()",
+      "file_type": "code",
+      "source_file": "script.js",
+      "source_location": "L9",
+      "id": "script_lerp",
+      "community": 0
+    },
+    {
+      "label": "tick()",
+      "file_type": "code",
+      "source_file": "script.js",
+      "source_location": "L62",
+      "id": "script_tick",
+      "community": 0
+    },
+    {
+      "label": "runLoader()",
+      "file_type": "code",
+      "source_file": "script.js",
+      "source_location": "L90",
+      "id": "script_runloader",
+      "community": 0
+    },
+    {
+      "label": "heroReveal()",
+      "file_type": "code",
+      "source_file": "script.js",
+      "source_location": "L115",
+      "id": "script_heroreveal",
+      "community": 0
+    },
+    {
+      "label": "platePara()",
+      "file_type": "code",
+      "source_file": "script.js",
+      "source_location": "L131",
+      "id": "script_platepara",
+      "community": 0
+    },
+    {
+      "label": "marquee()",
+      "file_type": "code",
+      "source_file": "script.js",
+      "source_location": "L147",
+      "id": "script_marquee",
+      "community": 1
+    },
+    {
+      "label": "manifesto()",
+      "file_type": "code",
+      "source_file": "script.js",
+      "source_location": "L160",
+      "id": "script_manifesto",
+      "community": 1
+    },
+    {
+      "label": "sectionHeads()",
+      "file_type": "code",
+      "source_file": "script.js",
+      "source_location": "L205",
+      "id": "script_sectionheads",
+      "community": 2
+    },
+    {
+      "label": "gallery()",
+      "file_type": "code",
+      "source_file": "script.js",
+      "source_location": "L215",
+      "id": "script_gallery",
+      "community": 1
+    },
+    {
+      "label": "atelier()",
+      "file_type": "code",
+      "source_file": "script.js",
+      "source_location": "L265",
+      "id": "script_atelier",
+      "community": 2
+    },
+    {
+      "label": "contact()",
+      "file_type": "code",
+      "source_file": "script.js",
+      "source_location": "L275",
+      "id": "script_contact",
+      "community": 2
+    },
+    {
+      "label": "showcase()",
+      "file_type": "code",
+      "source_file": "script.js",
+      "source_location": "L300",
+      "id": "script_showcase",
+      "community": 1
+    }
+  ],
+  "links": [
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "script.js",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_src": "script_js",
+      "_tgt": "script_qs",
+      "source": "script_js",
+      "target": "script_qs",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "script.js",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_src": "script_js",
+      "_tgt": "script_qsa",
+      "source": "script_js",
+      "target": "script_qsa",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "script.js",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_src": "script_js",
+      "_tgt": "script_lerp",
+      "source": "script_js",
+      "target": "script_lerp",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "script.js",
+      "source_location": "L62",
+      "weight": 1.0,
+      "_src": "script_js",
+      "_tgt": "script_tick",
+      "source": "script_js",
+      "target": "script_tick",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "script.js",
+      "source_location": "L90",
+      "weight": 1.0,
+      "_src": "script_js",
+      "_tgt": "script_runloader",
+      "source": "script_js",
+      "target": "script_runloader",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "script.js",
+      "source_location": "L115",
+      "weight": 1.0,
+      "_src": "script_js",
+      "_tgt": "script_heroreveal",
+      "source": "script_js",
+      "target": "script_heroreveal",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "script.js",
+      "source_location": "L131",
+      "weight": 1.0,
+      "_src": "script_js",
+      "_tgt": "script_platepara",
+      "source": "script_js",
+      "target": "script_platepara",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "script.js",
+      "source_location": "L147",
+      "weight": 1.0,
+      "_src": "script_js",
+      "_tgt": "script_marquee",
+      "source": "script_js",
+      "target": "script_marquee",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "script.js",
+      "source_location": "L160",
+      "weight": 1.0,
+      "_src": "script_js",
+      "_tgt": "script_manifesto",
+      "source": "script_js",
+      "target": "script_manifesto",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "script.js",
+      "source_location": "L205",
+      "weight": 1.0,
+      "_src": "script_js",
+      "_tgt": "script_sectionheads",
+      "source": "script_js",
+      "target": "script_sectionheads",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "script.js",
+      "source_location": "L215",
+      "weight": 1.0,
+      "_src": "script_js",
+      "_tgt": "script_gallery",
+      "source": "script_js",
+      "target": "script_gallery",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "script.js",
+      "source_location": "L265",
+      "weight": 1.0,
+      "_src": "script_js",
+      "_tgt": "script_atelier",
+      "source": "script_js",
+      "target": "script_atelier",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "script.js",
+      "source_location": "L275",
+      "weight": 1.0,
+      "_src": "script_js",
+      "_tgt": "script_contact",
+      "source": "script_js",
+      "target": "script_contact",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "script.js",
+      "source_location": "L300",
+      "weight": 1.0,
+      "_src": "script_js",
+      "_tgt": "script_showcase",
+      "source": "script_js",
+      "target": "script_showcase",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "script.js",
+      "source_location": "L148",
+      "weight": 1.0,
+      "_src": "script_marquee",
+      "_tgt": "script_qs",
+      "source": "script_qs",
+      "target": "script_marquee",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "script.js",
+      "source_location": "L161",
+      "weight": 1.0,
+      "_src": "script_manifesto",
+      "_tgt": "script_qs",
+      "source": "script_qs",
+      "target": "script_manifesto",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "script.js",
+      "source_location": "L217",
+      "weight": 1.0,
+      "_src": "script_gallery",
+      "_tgt": "script_qs",
+      "source": "script_qs",
+      "target": "script_gallery",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "script.js",
+      "source_location": "L301",
+      "weight": 1.0,
+      "_src": "script_showcase",
+      "_tgt": "script_qs",
+      "source": "script_qs",
+      "target": "script_showcase",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "script.js",
+      "source_location": "L190",
+      "weight": 1.0,
+      "_src": "script_manifesto",
+      "_tgt": "script_qsa",
+      "source": "script_qsa",
+      "target": "script_manifesto",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "script.js",
+      "source_location": "L206",
+      "weight": 1.0,
+      "_src": "script_sectionheads",
+      "_tgt": "script_qsa",
+      "source": "script_qsa",
+      "target": "script_sectionheads",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "script.js",
+      "source_location": "L266",
+      "weight": 1.0,
+      "_src": "script_atelier",
+      "_tgt": "script_qsa",
+      "source": "script_qsa",
+      "target": "script_atelier",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "script.js",
+      "source_location": "L276",
+      "weight": 1.0,
+      "_src": "script_contact",
+      "_tgt": "script_qsa",
+      "source": "script_qsa",
+      "target": "script_contact",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "script.js",
+      "source_location": "L63",
+      "weight": 1.0,
+      "_src": "script_tick",
+      "_tgt": "script_lerp",
+      "source": "script_lerp",
+      "target": "script_tick",
+      "confidence_score": 1.0
+    }
+  ],
+  "hyperedges": []
+}
