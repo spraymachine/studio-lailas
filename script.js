@@ -383,6 +383,18 @@ const showcase = () => {
     }
   });
 
+  // Heavy cinematic fade-up with blur (GPU-safe: transform/opacity/filter only)
+  gsap.from(".showcase__stage", {
+    y: 60, opacity: 0, filter: "blur(12px)", duration: 1.1, ease: "expo.out",
+    scrollTrigger: { trigger: ".showcase", start: "top 78%" },
+    clearProps: "filter",
+  });
+  gsap.from(".showcase__thumb", {
+    y: 24, opacity: 0, filter: "blur(6px)", duration: 0.7, stagger: 0.06, ease: "expo.out",
+    scrollTrigger: { trigger: ".showcase__rail-wrap", start: "top 85%" },
+    clearProps: "filter,opacity",
+  });
+
   render();
 };
 
